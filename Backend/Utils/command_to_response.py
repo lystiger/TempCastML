@@ -1,7 +1,7 @@
 #command_to_response.py
 import serial, time
 
-PORT =  'COM3'  # Thay đổi theo cổng của bạn
+PORT =  'COM7'  # Thay đổi theo cổng của bạn
 BAUD = 115200
 TIMEOUT = 2
 

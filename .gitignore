@@ -1,13 +1,18 @@
 # Python virtual environment
 venv/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
 # TensorFlow / AI model files
 *.h5
 *.pb
 *.tflite
+
+#Package
+*__init__.py
 
 # CSV or dataset files
 *.csv
@@ -15,3 +20,6 @@ __pycache__/
 # Windows
 Thumbs.db
 .DS_Store
+
+#Credentials
+.env

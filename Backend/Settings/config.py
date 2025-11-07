@@ -14,6 +14,7 @@ BASE_DIR = os.path.join(os.getcwd(), "Data") # Thư mục Data trong thư mục 
 RAW_SENSOR_DATA = os.path.join(BASE_DIR, 'raw_data.csv') # Thư mục raw_data.csv trong thư mục Data
 RAW_API_DATA = os.path.join(BASE_DIR, 'raw_data_api.csv') # Thư mục raw_data_api.csv trong thư mục Data
 MERGED_DATA = os.path.join(BASE_DIR, 'merged_data.csv') # Thư mục merged_data.csv trong thư mục Data
+JSON_DIR = os.path.join(BASE_DIR, 'data.json') # Thư mục data.json trong thư mục Data
 PROCESSED_DIR = os.path.join(BASE_DIR, "Processed") # Thư mục Processed trong thư mục Data
 PROCESSED_SENSOR_DATA = os.path.join(PROCESSED_DIR, 'processed_sensor_data.csv') # Thư mục processed_sensor_data.csv trong thư mục Processed
 PROCESSED_API_DATA = os.path.join(PROCESSED_DIR, 'processed_api_data.csv') # Thư mục processed_api_data.csv trong thư mục Processed
@@ -25,3 +26,13 @@ LOG_FILE = os.path.join(os.getcwd(), "Log", 'data_collection.log') # Thư mục 
 # ------------------ API ---------------------
 API_KEY = ""  # Lên trang https://home.openweathermap.org/api_keys để lấy API key
 CITY = "Hung Yen, VN"
+
+#==================OTHER CONFIG=========================
+DEFAULT_BAUD = 115200
+DEFAULT_TIMEOUT = 1
+DEFAULT_WRITE_TIMEOUT = 1
+DEFAULT_READ_TIMEOUT = 1
+DEFAULT_IDLE_LIMIT = 10
+
+#==================BACKEND CONFIG=========================
+BACKEND_URL = "http://localhost:8000/data"

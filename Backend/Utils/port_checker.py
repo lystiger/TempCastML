@@ -1,8 +1,8 @@
 #port_checker.py
 import serial #import module chinh cua Pyserial
 from typing import Optional
-from config import DEFAULT_BAUD, DEFAULT_TIMEOUT
-from config import DEFAULT_WRITE_TIMEOUT
+from Settings.config import DEFAULT_BAUD, DEFAULT_TIMEOUT
+from Settings.config import DEFAULT_WRITE_TIMEOUT
 
 
 def open_serial(PORT: str,
@@ -25,7 +25,7 @@ def open_serial(PORT: str,
 
 
 if __name__ == "__main__":
-    test_port = "COM4"
+    test_port = "COM7"
     test_baud = DEFAULT_BAUD
     test_timeout = DEFAULT_TIMEOUT
     s = open_serial(test_port,test_baud,test_timeout,DEFAULT_WRITE_TIMEOUT)
