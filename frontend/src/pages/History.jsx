@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getHistory } from "../services/fakeApi";
+import "./history.css"; // new CSS for this page
 
 export default function History() {
   const [history, setHistory] = useState([]);
@@ -9,15 +10,17 @@ export default function History() {
   }, []);
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">History</h1>
-      <ul className="bg-white p-4 shadow rounded">
-        {history.map((h, idx) => (
-          <li key={idx} className="py-2 border-b last:border-0">
-            {h.date} — <span className="font-semibold">{h.avg}°C</span>
-          </li>
-        ))}
-      </ul>
+    <div className="history-wrapper">
+      <div className="history-container">
+        <h1>History</h1>
+        <ul className="history-list">
+          {history.map((h, idx) => (
+            <li key={idx}>
+              {h.date} — <span className="avg-temp">{h.avg}°C</span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

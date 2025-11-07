@@ -23,3 +23,6 @@ Thumbs.db
 
 #Credentials
 .env
+
+#Log file 
+../Log/*

@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { getHistory } from "../services/fakeApi";
+import "./about.css"; // new CSS for this page
 
 export default function About() {
+  const [history, setHistory] = useState([]);
+
+  useEffect(() => {
+    setHistory(getHistory());
+  }, []);
+
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">About</h1>
-      <p className="bg-white p-4 shadow rounded">
-        This project predicts indoor temperature for study purposes.
-        Data is currently mocked but will be connected to a real backend later.
-      </p>
+    <div className="about-wrapper">
+      <div className="about-container">
+        <h1>About</h1>
+          <p>This website using the fake API, it will later be connected to the real backend later</p>
+      </div>
     </div>
   );
 }
