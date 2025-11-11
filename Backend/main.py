@@ -1,8 +1,10 @@
 # Backend/main.py
 from fastapi import FastAPI
-from backend.database.database import create_db_and_tables
-from backend.routes.sensor_routes import router as sensor_router
-from backend.routes.predict_routes import router as predict_router
+from backend.Database.database import create_db_and_tables
+from backend.Routes.sensor_routes import router as sensor_router
+from backend.Routes.predict_routes import router as predict_router
+import sys, os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 app = FastAPI(title="TempCastML Backend")
 
