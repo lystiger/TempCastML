@@ -69,25 +69,38 @@
 import numpy as np
 from tensorflow.keras.models import load_model
 
+# NOTE: The training code for the LSTM model is commented out above.
+# The code below loads a pre-trained model and uses it for prediction.
+
+# Path to the pre-trained model
 MODEL_PATH = "AI/Model/lstm_model.h5"
 
 try:
+    # Load the pre-trained model
     model = load_model(MODEL_PATH)
 except Exception:
+    # If the model cannot be loaded, set it to None and print a warning
     model = None
     print("[Warning] LSTM model not found — using mock predictions")
 
 def predict_temperature(history, horizon=24):
+    """
+    This function generates a temperature forecast for a given history of temperatures.
+    It uses a pre-trained LSTM model to generate the forecast.
+    If the model is not available, it falls back to a simple average prediction.
+    """
     if model is None:
-        # fallback: simple average prediction
+        # Fallback to a simple average prediction if the model is not available
         avg = float(np.mean(history))
         return [avg] * horizon
 
-    # preprocess (reshape for LSTM)
+    # Preprocess the input data to be in the correct shape for the LSTM model
     input_seq = np.array(history[-24:]).reshape(1, -1, 1)
     preds = []
     for _ in range(horizon):
+        # Generate a prediction using the model
         pred = model.predict(input_seq)[0][0]
         preds.append(float(pred))
+        # Update the input sequence with the new prediction
         input_seq = np.append(input_seq[:, 1:, :], [[[pred]]], axis=1)
     return preds

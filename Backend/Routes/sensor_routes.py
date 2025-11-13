@@ -1,35 +1,35 @@
-# Backend/routes/predict.py
-from fastapi import APIRouter, HTTPException, Query
-from sqlmodel import Session, select
-from datetime import datetime, timezone, timedelta
+from fastapi import APIRouter, HTTPException
+from sqlmodel import Session
 from backend.Database.database import engine
 from backend.Database.models import Reading
-from backend.AI.LTSM import predict_temperature
+from pydantic import BaseModel
 
+# Create a new router for the sensor data
 router = APIRouter()
 
-@router.get("/")
-def forecast(device_id: int, horizon: int = Query(24, description="Hours to predict")):
-    cutoff = datetime.now(timezone.utc) - timedelta(hours=72)
+class SensorData(BaseModel):
+    """
+    This is the Pydantic model for the sensor data.
+    It defines the expected data types for the device_id and temperature_c fields.
+    """
+    device_id: int
+    temperature_c: float
+
+@router.post("/")
+def receive_data(data: SensorData):
+    """
+    This endpoint receives sensor data via a POST request.
+    The data is validated against the SensorData model.
+    If the data is valid, it is saved to the database.
+    """
     with Session(engine) as session:
-        readings = session.exec(
-            select(Reading)
-            .where(Reading.device_id == device_id, Reading.timestamp >= cutoff)
-            .order_by(Reading.timestamp)
-        ).all()
-
-    if not readings:
-        raise HTTPException(status_code=404, detail="No readings available for this device")
-
-    temps = [r.temperature_c for r in readings]
-    try:
-        forecast_values = predict_temperature(temps, horizon)
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Prediction error: {e}")
-
-    return {
-        "device_id": device_id,
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "horizon_hours": horizon,
-        "forecast": forecast_values,
-    }
+        # Create a new Reading object from the received data
+        db_reading = Reading.from_orm(data)
+        # Add the new reading to the session
+        session.add(db_reading)
+        # Commit the session to save the reading to the database
+        session.commit()
+        # Refresh the session to get the updated reading from the database
+        session.refresh(db_reading)
+    # Return the newly created reading
+    return db_reading
