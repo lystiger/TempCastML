@@ -4,16 +4,16 @@ import serial, time
 import os
 from typing import List, Tuple, Optional, Dict, Any
 import argparse
-from Settings.config import (
+from backend.Settings.config import (
     DEFAULT_TIMEOUT,
     DEFAULT_WRITE_TIMEOUT,
     DEFAULT_BAUD,
     DEFAULT_IDLE_LIMIT,
     JSON_DIR)
-from Utils.port_identifier import identify
-from Utils.port_checker import open_serial
-from Utils.data_reader import data_reader
-from Utils.Resilient_reader import choose_port, resilient_reader
+from backend.Utils.port_identifier import identify
+from backend.Utils.port_checker import open_serial
+from backend.Utils.data_reader import data_reader
+from backend.Utils.Resilient_reader import choose_port, resilient_reader
 import subprocess
 import json
 

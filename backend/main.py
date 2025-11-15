@@ -1,11 +1,15 @@
-# backend/main.py
+# Backend/main.py
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware # Import CORSMiddleware
+from backend.Database.database import create_db_and_tables
+from backend.Routes.sensor_routes import router as sensor_router
+from backend.Routes.predict_routes import router as predict_router
+import sys, os
 
-# Use relative imports within the 'backend' package
-from .Database.database import create_db_and_tables
-from .Routes.sensor_routes import router as sensor_router
-from .Routes.predict_routes import router as predict_router
+# 
+
+# Add the project root to the Python path to allow for absolute imports
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Create a FastAPI application instance
 app = FastAPI(title="TempCastML Backend")
@@ -33,7 +37,9 @@ def on_startup():
     create_db_and_tables()
 
 # Include the sensor and predict routers
+# The sensor router handles all routes related to sensor data
 app.include_router(sensor_router, prefix="/sensor", tags=["Sensor"])
+# The predict router handles all routes related to temperature prediction
 app.include_router(predict_router, prefix="/predict", tags=["Prediction"])
 
 @app.get("/")

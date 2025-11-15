@@ -2,9 +2,9 @@ import json
 import requests
 import sys
 import os
-from Settings.config import BACKEND_URL
+from backend.Settings.config import BACKEND_URL
 
-BACKEND_URL = "http://localhost:8000/data"
+BACKEND_URL = "http://localhost:8000/sensor"
 
 def send_to_backend(data):
     """

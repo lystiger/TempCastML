@@ -1,8 +1,8 @@
 #port_checker.py
 import serial #import module chinh cua Pyserial
 from typing import Optional
-from Settings.config import DEFAULT_BAUD, DEFAULT_TIMEOUT
-from Settings.config import DEFAULT_WRITE_TIMEOUT
+from backend.Settings.config import DEFAULT_BAUD, DEFAULT_TIMEOUT
+from backend.Settings.config import DEFAULT_WRITE_TIMEOUT
 
 
 def open_serial(PORT: str,

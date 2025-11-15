@@ -2,15 +2,15 @@
 #Muc tieu cua phan nay la reconnect khi ket noi hong, tranh reo, crash va dong het cong truoc khi thu lai
 import serial, time
 
-from Settings.config import (
+from backend.Settings.config import (
     DEFAULT_TIMEOUT,
     DEFAULT_WRITE_TIMEOUT,
     DEFAULT_BAUD,
     DEFAULT_IDLE_LIMIT)
 
-from Utils.port_identifier import identify
-from Utils.port_checker import open_serial
-from Utils.data_reader import data_reader
+from backend.Utils.port_identifier import identify
+from backend.Utils.port_checker import open_serial
+from backend.Utils.data_reader import data_reader
 
 def choose_port():
     ports = identify()
