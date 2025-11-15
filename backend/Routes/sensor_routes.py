@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from sqlmodel import Session, select
-from backend.Database.database import engine
-from backend.Database.models import Reading
+from ..Database.database import engine
+from ..Database.models import Reading
 from pydantic import BaseModel
 
 # Create a new router for the sensor data

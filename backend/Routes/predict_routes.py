@@ -1,9 +1,9 @@
 from fastapi import APIRouter, HTTPException, Query
 from sqlmodel import Session, select
 from datetime import datetime, timezone, timedelta
-from backend.Database.database import engine
-from backend.Database.models import Reading
-from backend.AI.LTSM import predict_temperature
+from ..Database.database import engine
+from ..Database.models import Reading
+from ..AI.LTSM import predict_temperature
 
 # Create a new router for the prediction
 router = APIRouter()
