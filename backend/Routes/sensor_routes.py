@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from sqlmodel import Session
+from sqlmodel import Session, select
 from backend.Database.database import engine
 from backend.Database.models import Reading
 from pydantic import BaseModel
@@ -33,3 +33,29 @@ def receive_data(data: SensorData):
         session.refresh(db_reading)
     # Return the newly created reading
     return db_reading
+
+@router.get("/latest")
+def get_latest_reading():
+    """
+    Retrieves the latest sensor reading from the database.
+    """
+    with Session(engine) as session:
+        latest_reading = session.exec(
+            select(Reading).order_by(Reading.timestamp.desc())
+        ).first()
+        if not latest_reading:
+            raise HTTPException(status_code=404, detail="No sensor readings found")
+        return latest_reading
+
+@router.get("/history")
+def get_historical_readings(limit: int = 10):
+    """
+    Retrieves a list of historical sensor readings from the database.
+    """
+    with Session(engine) as session:
+        historical_readings = session.exec(
+            select(Reading).order_by(Reading.timestamp.desc()).limit(limit)
+        ).all()
+        if not historical_readings:
+            raise HTTPException(status_code=404, detail="No historical sensor readings found")
+        return historical_readings

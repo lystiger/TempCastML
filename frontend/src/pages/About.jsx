@@ -1,20 +1,39 @@
-import React, { useEffect, useState } from "react";
-import { getHistory } from "../services/fakeApi";
-import "./about.css"; // new CSS for this page
+import React from "react";
+import { Card } from "react-bootstrap";
 
 export default function About() {
-  const [history, setHistory] = useState([]);
-
-  useEffect(() => {
-    setHistory(getHistory());
-  }, []);
-
   return (
-    <div className="about-wrapper">
-      <div className="about-container">
-        <h1>About</h1>
-          <p>This website using the fake API, it will later be connected to the real backend later</p>
-      </div>
-    </div>
+    <>
+      <h1 className="mb-4">About TempCastML</h1>
+      <Card>
+        <Card.Body>
+          <Card.Title>A Machine Learning Powered Temperature Forecasting Tool</Card.Title>
+          <Card.Text>
+            This application provides real-time temperature monitoring and future forecasting
+            using a Long Short-Term Memory (LSTM) neural network.
+          </Card.Text>
+          <hr />
+          <h5>Components:</h5>
+          <ul>
+            <li>
+              <strong>Data Ingestion:</strong> A Python backend service collects temperature
+              data, which can be sourced from hardware sensors like an Arduino.
+            </li>
+            <li>
+              <strong>API:</strong> A FastAPI server provides RESTful endpoints for accessing
+              the latest sensor readings, historical data, and ML-powered predictions.
+            </li>
+            <li>
+              <strong>Frontend:</strong> A responsive user interface built with React and
+              Bootstrap for visualizing data and forecasts.
+            </li>
+            <li>
+              <strong>Machine Learning Model:</strong> An LSTM model trained on historical
+              time-series data to predict future temperature trends.
+            </li>
+          </ul>
+        </Card.Body>
+      </Card>
+    </>
   );
 }

@@ -1,26 +1,43 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Container, Navbar, Nav } from "react-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 import Dashboard from "./pages/Dashboard";
 import History from "./pages/History";
 import About from "./pages/About";
-import "./App.css"; 
 
 export default function App() {
   return (
     <Router>
-      <nav className="nav-links">
-        <Link to="/">Dashboard</Link>
-        <Link to="/history">History</Link>
-        <Link to="/about">About</Link>
-      </nav>
+      <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
+        <Container>
+          <LinkContainer to="/">
+            <Navbar.Brand>TempCastML</Navbar.Brand>
+          </LinkContainer>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <LinkContainer to="/">
+                <Nav.Link>Dashboard</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/history">
+                <Nav.Link>History</Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/about">
+                <Nav.Link>About</Nav.Link>
+              </LinkContainer>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
 
-      <div style={{ paddingTop: "64px" }}>
+      <Container className="mt-5 pt-3">
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/history" element={<History />} />
           <Route path="/about" element={<About />} />
         </Routes>
-      </div>
+      </Container>
     </Router>
   );
 }
