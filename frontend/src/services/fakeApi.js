@@ -1,21 +1,22 @@
 export function getCurrentTemperature() {
-    return { city: "Hanoi", temp: 30, unit: "°C", time: "2025-09-20 16:00" };
-  }
+    return {
+        temperature_c: 30,
+        timestamp: "2025-09-20T16:00:00Z"
+    };
+}
   
   export function getPredictions() {
-    return [
-      { time: "17:00", temp: 31 },
-      { time: "18:00", temp: 30 },
-      { time: "19:00", temp: 29 },
-      { time: "20:00", temp: 28 }
-    ];
-  }
+    return {
+        forecast: [31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8]
+    };
+}
   
   export function getHistory() {
     return [
-      { date: "2025-09-18", avg: 29 },
-      { date: "2025-09-19", avg: 30 },
-      { date: "2025-09-20", avg: 31 }
+        { id: 1, timestamp: "2025-09-20T15:00:00Z", temperature_c: 29.5, device_id: 1 },
+        { id: 2, timestamp: "2025-09-20T14:00:00Z", temperature_c: 30.1, device_id: 1 },
+        { id: 3, timestamp: "2025-09-20T13:00:00Z", temperature_c: 31.2, device_id: 1 },
+        { id: 4, timestamp: "2025-09-20T12:00:00Z", temperature_c: 30.8, device_id: 1 },
     ];
-  }
+}
   

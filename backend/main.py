@@ -6,7 +6,8 @@ from backend.Routes.sensor_routes import router as sensor_router
 from backend.Routes.predict_routes import router as predict_router
 import sys, os
 
-# 
+# Get rid of the notification
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 # Add the project root to the Python path to allow for absolute imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
