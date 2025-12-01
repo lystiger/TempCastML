@@ -8,7 +8,7 @@ import time
 from datetime import datetime
 import requests
 import threading
-from config import BAUD_RATE, RAW_SENSOR_DATA, RAW_API_DATA, MERGED_DATA, LOG_FILE, API_KEY, CITY
+from backend.Settings.config import BAUD_RATE, RAW_SENSOR_DATA, RAW_API_DATA, MERGED_DATA, LOG_FILE, API_KEY, CITY
 
 # ========================LOGGING=========================
 logging.basicConfig(

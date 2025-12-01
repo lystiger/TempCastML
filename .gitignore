@@ -31,4 +31,4 @@ Thumbs.db
 ./.vscode/*
 
 #my config
-./config.py
+./Settings/config.py

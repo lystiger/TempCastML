@@ -28,10 +28,13 @@ echo "  Starting TempCastML Data Collector "
 echo " ===================================="
 echo ""
 
-# Change directory to the location of this .sh file.
-# This ensures that all relative paths in the Python script work correctly.
+# Define the project root directory relative to this script.
 SCRIPT_DIR="$(dirname "$0")"
-cd "$SCRIPT_DIR"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+
+# Change to the project root directory
+cd "$PROJECT_ROOT"
+
 echo " - Working Directory: $(pwd)"
 
 # Activate the Python virtual environment.
@@ -58,7 +61,8 @@ echo "  To stop collecting, press CTRL+C in this window."
 echo " ========================================================================="
 echo ""
 
-python backend/Ingestion/collect_data.py
+# Run the python script from the project root
+PYTHONPATH="$PROJECT_ROOT:$PYTHONPATH" python backend/Ingestion/collect_data.py
 
 # This part will only be reached when the script is stopped (e.g., with Ctrl+C).
 echo ""

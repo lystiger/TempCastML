@@ -21,7 +21,10 @@ PROCESSED_API_DATA = os.path.join(PROCESSED_DIR, 'processed_api_data.csv') # Th�
 PROCESSED_MERGED_DATA = os.path.join(PROCESSED_DIR, 'processed_merged_data.csv') # Thư mục processed_merged_data.csv trong thư mục Processed
 MODEL_DIR = os.path.join(os.getcwd(), "AI", "Model") # Thư mục Model trong thư mục AI
 MODEL_PATH = os.path.join(MODEL_DIR, 'lstm_model.h5') # Thư mục lstm_model.h5 trong thư mục Model
-LOG_FILE = os.path.join(os.getcwd(), "Log", 'data_collection.log') # Thư mục log trong thư mục hiện tại
+# Get the directory of the current config.py file
+CONFIG_DIR = os.path.dirname(os.path.abspath(__file__))
+# Construct the path to the Log directory relative to the backend directory
+LOG_FILE = os.path.join(CONFIG_DIR, "..", "Log", 'data_collection.log')
 
 # ------------------ API ---------------------
 API_KEY = "3752e6764a2889aea4649454ecab3d4d"  # Lên trang https://home.openweathermap.org/api_keys để lấy API key

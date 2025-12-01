@@ -1,0 +1,16 @@
+2025-12-01 19:54:52,776 - INFO - Logger đã được thiết lập.
+2025-12-01 19:54:52,777 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Data/merged_data.csv
+2025-12-01 19:54:52,777 - INFO - Thread cập nhật thời tiết đã bắt đầu.
+2025-12-01 19:54:52,777 - INFO - Bắt đầu vòng lặp thu thập dữ liệu... Nhấn Ctrl+C để dừng.
+2025-12-01 19:54:52,793 - INFO - Tìm thấy cổng phù hợp: /dev/ttyACM0 - USB JTAG/serial debug unit
+2025-12-01 19:54:54,794 - INFO - Kết nối thành công với /dev/ttyACM0 ở tốc độ 115200.
+2025-12-01 19:54:57,990 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 23°C, Độ ẩm 76%, Áp suất 1012 hPa
+2025-12-01 19:54:57,990 - INFO - Dữ liệu thời tiết đã được cập nhật trong thread.
+2025-12-01 20:03:29,485 - INFO - Logger đã được thiết lập.
+2025-12-01 20:03:29,485 - INFO - CSV file đã được tạo: /home/lystiger/Documents/TempCastML/Data/merged_data.csv
+2025-12-01 20:03:29,486 - INFO - Thread cập nhật thời tiết đã bắt đầu.
+2025-12-01 20:03:29,486 - INFO - Bắt đầu vòng lặp thu thập dữ liệu... Nhấn Ctrl+C để dừng.
+2025-12-01 20:03:29,502 - INFO - Tìm thấy cổng phù hợp: /dev/ttyACM0 - USB JTAG/serial debug unit
+2025-12-01 20:03:29,664 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 23°C, Độ ẩm 76%, Áp suất 1012 hPa
+2025-12-01 20:03:29,665 - INFO - Dữ liệu thời tiết đã được cập nhật trong thread.
+2025-12-01 20:03:31,503 - INFO - Kết nối thành công với /dev/ttyACM0 ở tốc độ 115200.
