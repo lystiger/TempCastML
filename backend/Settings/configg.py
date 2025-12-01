@@ -24,7 +24,7 @@ MODEL_PATH = os.path.join(MODEL_DIR, 'lstm_model.h5') # Thư mục lstm_model.h5
 LOG_FILE = os.path.join(os.getcwd(), "Log", 'data_collection.log') # Thư mục log trong thư mục hiện tại
 
 # ------------------ API ---------------------
-API_KEY = "3752e6764a2889aea4649454ecab3d4d"  # Lên trang https://home.openweathermap.org/api_keys để lấy API key
+API_KEY = ""  # Lên trang https://home.openweathermap.org/api_keys để lấy API key
 CITY = "Ha Noi, VN"
 
 #==================OTHER CONFIG=========================
