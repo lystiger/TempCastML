@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
       <h1 className="mb-4">About TempCastML</h1>
-      <Card>
+      <Card className="card-hover">
         <Card.Body>
           <Card.Title>A Machine Learning Powered Temperature Forecasting Tool</Card.Title>
           <Card.Text>

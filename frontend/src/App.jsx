@@ -6,6 +6,7 @@ import { Toaster } from "react-hot-toast";
 import Dashboard from "./pages/Dashboard";
 import History from "./pages/History";
 import About from "./pages/About";
+import { TimeFormatProvider } from "./contexts/TimeFormatContext";
 
 export default function App() {
   return (
@@ -33,12 +34,14 @@ export default function App() {
         </Container>
       </Navbar>
 
-      <Container className="mt-5 pt-3">
-        <Routes>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/history" element={<History />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
+      <Container className="main-content-container mt-5 pt-3">
+        <TimeFormatProvider>
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/history" element={<History />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </TimeFormatProvider>
       </Container>
     </Router>
   );

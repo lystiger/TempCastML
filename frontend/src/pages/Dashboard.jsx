@@ -1,29 +1,57 @@
-import React, { useEffect, useState } from "react";
-import { getLatestSensorData, getPrediction } from "../services/api";
+import React, { useEffect, useState, useContext } from "react";
+import { getLatestSensorData, getPrediction, getHistoricalSensorData } from "../services/api";
 import { Line } from "react-chartjs-2";
 import "chart.js/auto";
-import { Row, Col, Card, Spinner, Alert, Button } from "react-bootstrap";
+import { Row, Col, Card, Spinner, Alert, Button, Form } from "react-bootstrap";
 import toast from "react-hot-toast";
+import { TimeFormatContext } from "../contexts/TimeFormatContext";
+import { TemperatureUnitContext } from "../contexts/TemperatureUnitContext";
 
 export default function Dashboard() {
   const [latestData, setLatestData] = useState(null);
   const [predictionData, setPredictionData] = useState(null);
+  const [historicalData, setHistoricalData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { is24hFormat, setIs24hFormat } = useContext(TimeFormatContext);
+  const { unit, toggleUnit } = useContext(TemperatureUnitContext);
+
+  const convertTemperature = (temp) => {
+    if (unit === 'fahrenheit') {
+      return (temp * 9/5) + 32;
+    }
+    if (unit === 'kelvin') {
+      return temp + 273.15;
+    }
+    return temp;
+  };
+
+  const getUnitSymbol = () => {
+    if (unit === 'fahrenheit') {
+      return '°F';
+    }
+    if (unit === 'kelvin') {
+      return 'K';
+    }
+    return '°C';
+  };
 
   const fetchData = async (showToast = false) => {
     try {
       setLoading(true);
       setError(null);
 
-      // Fetch both latest data and predictions
-      const [latest, prediction] = await Promise.all([
+      // Fetch all data
+      const [latest, prediction, history] = await Promise.all([
         getLatestSensorData(),
         getPrediction(1, 24), // Using device_id=1 and horizon=24 as example
+        getHistoricalSensorData(),
       ]);
 
       setLatestData(latest);
       setPredictionData(prediction);
+      setHistoricalData(history);
+
       if (showToast) {
         toast.success("Data refreshed successfully!");
       }
@@ -71,18 +99,42 @@ export default function Dashboard() {
       });
   };
 
+  const getTodayAverage = () => {
+    if (!historicalData) return 0;
+    const today = new Date().toLocaleDateString();
+    const todayData = historicalData.filter(
+      (d) => new Date(d.timestamp).toLocaleDateString() === today
+    );
+    if (todayData.length === 0) return 0;
+    const total = todayData.reduce((acc, curr) => acc + curr.temperature_c, 0);
+    return convertTemperature(total / todayData.length).toFixed(1);
+  };
+
   const chartData = {
     labels: predictionData?.forecast.map((_, index) => `+${index + 1}h`),
     datasets: [
       {
-        label: "Predicted Temperature (°C)",
-        data: predictionData?.forecast,
+        label: `Predicted Temperature (${getUnitSymbol()})`,
+        data: predictionData?.forecast.map(convertTemperature),
         borderColor: "#0d6efd",
         backgroundColor: "rgba(13, 110, 253, 0.1)",
         fill: true,
         tension: 0.4,
       },
+      {
+        label: `Real Temperature (${getUnitSymbol()})`,
+        data: predictionData?.real.map(convertTemperature),
+        borderColor: "#fd7e14",
+        backgroundColor: "rgba(253, 126, 20, 0.1)",
+        fill: true,
+        tension: 0.4,
+      },
     ],
+  };
+
+  const handleTimeFormatToggle = () => {
+    setIs24hFormat(!is24hFormat);
+    toast.success(`Switched to ${!is24hFormat ? "24h" : "12h"} format`);
   };
 
   if (loading) {
@@ -104,34 +156,70 @@ export default function Dashboard() {
     <>
       <div className="d-flex justify-content-between align-items-center mb-4">
         <h1>Dashboard</h1>
-        <Button onClick={handleRefresh}>
-          Refresh
-        </Button>
+        <div className="d-flex align-items-center">
+          <Form.Group as={Row} className="mb-0 me-3">
+            <Col sm={12}>
+              <Form.Select onChange={(e) => {
+                toggleUnit(e.target.value);
+                toast.success(`Switched to ${e.target.value.charAt(0).toUpperCase() + e.target.value.slice(1)}`);
+              }} value={unit}>
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+              </Form.Select>
+            </Col>
+          </Form.Group>
+          <Button onClick={handleTimeFormatToggle} className="me-2">
+            {is24hFormat ? "Switch to 12h" : "Switch to 24h"}
+          </Button>
+          <Button onClick={handleRefresh}>
+            Refresh
+          </Button>
+        </div>
       </div>
       <Row>
-        <Col md={4} className="mb-4">
-          <Card className="h-100 card-hover">
-            <Card.Body>
-              <Card.Title>Latest Sensor Reading</Card.Title>
-              {latestData ? (
-                <>
+        <Col md={4} className="d-flex flex-column">
+          <Row>
+            <Col className="mb-4">
+              <Card className="h-100 card-hover">
+                <Card.Body>
+                  <Card.Title>Latest Sensor Prediction</Card.Title>
+                  {latestData ? (
+                    <>
+                      <div className="display-4 fw-bold">
+                        {convertTemperature(latestData.temperature_c).toFixed(1)}{getUnitSymbol()}
+                      </div>
+                      <Card.Text className="text-muted">
+                        Last updated: {new Date(latestData.timestamp).toLocaleString([], { hour12: !is24hFormat })}
+                      </Card.Text>
+                    </>
+                  ) : (
+                    <Card.Text>No latest data available.</Card.Text>
+                  )}
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+          <Row>
+            <Col className="mb-4">
+              <Card className="h-100 card-hover">
+                <Card.Body>
+                  <Card.Title>Today's Temperature</Card.Title>
                   <div className="display-4 fw-bold">
-                    {latestData.temperature_c.toFixed(1)}°C
+                    {getTodayAverage()}{getUnitSymbol()}
                   </div>
                   <Card.Text className="text-muted">
-                    Last updated: {new Date(latestData.timestamp).toLocaleString()}
+                    {new Date().toLocaleDateString()}
                   </Card.Text>
-                </>
-              ) : (
-                <Card.Text>No latest data available.</Card.Text>
-              )}
-            </Card.Body>
-          </Card>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Col>
         <Col md={8} className="mb-4">
-          <Card className="card-hover">
+          <Card className="h-100 card-hover">
             <Card.Body>
-              <Card.Title>24-Hour Temperature Forecast</Card.Title>
+              <Card.Title>{is24hFormat ? "24-Hour" : "12-Hour"} Temperature Forecast</Card.Title>
               {predictionData ? (
                 <Line data={chartData} />
               ) : (
