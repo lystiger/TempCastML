@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
+import { Toaster } from "react-hot-toast";
 import Dashboard from "./pages/Dashboard";
 import History from "./pages/History";
 import About from "./pages/About";
@@ -9,6 +10,7 @@ import About from "./pages/About";
 export default function App() {
   return (
     <Router>
+      <Toaster position="top-right" reverseOrder={false} />
       <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
         <Container>
           <LinkContainer to="/">

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { getLatestSensorData, getPrediction } from "../services/api";
 import { Line } from "react-chartjs-2";
 import "chart.js/auto";
-import { Row, Col, Card, Spinner, Alert } from "react-bootstrap";
+import { Row, Col, Card, Spinner, Alert, Button } from "react-bootstrap";
+import toast from "react-hot-toast";
 
 export default function Dashboard() {
   const [latestData, setLatestData] = useState(null);
@@ -10,30 +11,37 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        setError(null);
+  const fetchData = async (showToast = false) => {
+    try {
+      setLoading(true);
+      setError(null);
 
-        // Fetch both latest data and predictions
-        const [latest, prediction] = await Promise.all([
-          getLatestSensorData(),
-          getPrediction(1, 24), // Using device_id=1 and horizon=24 as example
-        ]);
+      // Fetch both latest data and predictions
+      const [latest, prediction] = await Promise.all([
+        getLatestSensorData(),
+        getPrediction(1, 24), // Using device_id=1 and horizon=24 as example
+      ]);
 
-        setLatestData(latest);
-        setPredictionData(prediction);
-      } catch (err) {
-        setError(
-          "Failed to fetch data. Please make sure the backend server is running."
-        );
-        console.error(err);
-      } finally {
-        setLoading(false);
+      setLatestData(latest);
+      setPredictionData(prediction);
+      if (showToast) {
+        toast.success("Data refreshed successfully!");
       }
-    };
+    } catch (err) {
+      setError(
+        "Failed to fetch data. Please make sure the backend server is running."
+      );
+      console.error(err);
+      if (showToast) {
+        toast.error("Failed to refresh data.");
+      }
+      throw err; // Re-throw the error to be caught by the caller
+    } finally {
+      setLoading(false);
+    }
+  };
 
+  useEffect(() => {
     fetchData();
     // Set up an interval to fetch new data every 60 seconds
     const intervalId = setInterval(fetchData, 60000);
@@ -41,6 +49,27 @@ export default function Dashboard() {
     // Clean up the interval on component unmount
     return () => clearInterval(intervalId);
   }, []);
+
+  const handleRefresh = () => {
+    const toastId = toast.loading("Refreshing data...");
+
+    const timeoutPromise = new Promise((_, reject) =>
+      setTimeout(() => {
+        reject(new Error("Request timed out"));
+      }, 8000)
+    );
+
+    Promise.race([fetchData(true), timeoutPromise])
+      .catch(error => {
+        if (error.message === "Request timed out") {
+          toast.error("Failed to fetch new data: request timed out.", { id: toastId });
+        }
+        // Errors from fetchData are already handled within the function
+      })
+      .finally(() => {
+        toast.dismiss(toastId);
+      });
+  };
 
   const chartData = {
     labels: predictionData?.forecast.map((_, index) => `+${index + 1}h`),
@@ -73,10 +102,15 @@ export default function Dashboard() {
 
   return (
     <>
-      <h1 className="mb-4">Dashboard</h1>
+      <div className="d-flex justify-content-between align-items-center mb-4">
+        <h1>Dashboard</h1>
+        <Button onClick={handleRefresh}>
+          Refresh
+        </Button>
+      </div>
       <Row>
         <Col md={4} className="mb-4">
-          <Card className="h-100">
+          <Card className="h-100 card-hover">
             <Card.Body>
               <Card.Title>Latest Sensor Reading</Card.Title>
               {latestData ? (
@@ -95,7 +129,7 @@ export default function Dashboard() {
           </Card>
         </Col>
         <Col md={8} className="mb-4">
-          <Card>
+          <Card className="card-hover">
             <Card.Body>
               <Card.Title>24-Hour Temperature Forecast</Card.Title>
               {predictionData ? (
