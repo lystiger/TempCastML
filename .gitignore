@@ -28,4 +28,4 @@ Thumbs.db
 ../Log/*
 
 #vscode config
-.vscode/*
+./.vscode/*
