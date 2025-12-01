@@ -34,6 +34,24 @@ export default function About() {
           </ul>
         </Card.Body>
       </Card>
+      <Card className="card-hover">
+        <Card.Body>
+          <Card.Title>Who are we ?</Card.Title>
+          <Card.Text>
+            A little bit about us, we are a pair of stupid ass douchebag who are trying to create something for our CV and TempCastML is the first step.
+          </Card.Text>
+          <hr />
+          <h5>Role:</h5>
+          <ul>
+            <li>
+              <strong>Hung Lee:</strong> Leader, Low-Level Programmer, Circuit Builder, Mechanical Freak, Electrical Engineer Genius.
+            </li>
+            <li>
+              <strong>Hung Anh:</strong> A little fellow whose main purpose is to relax and build the webpage, all roads lead to my boss.
+            </li>
+          </ul>
+        </Card.Body>
+      </Card>
     </>
   );
 }
