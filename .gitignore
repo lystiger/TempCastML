@@ -26,3 +26,6 @@ Thumbs.db
 
 #Log file 
 ../Log/*
+
+#vscode config
+.vscode/*
