@@ -24,17 +24,37 @@ export function getCurrentTemperature() {
 }
   
 /**
- * Simulates fetching historical temperature data.
- * @returns {Array<Object>} An array of objects, each representing a historical temperature record
- *                          with id, timestamp, temperature, device_id, forecast, and real values.
+ * Simulates fetching historical sensor data with new fields.
+ * @param {object} options - Options for fetching data (e.g., limit).
+ * @returns {Array<Object>} An array of objects, each representing a historical sensor record.
  */
-export function getHistory() {
-  return [
-    { id: 1, timestamp: "2025-12-01T15:00:00Z", temperature_c: 29.5, device_id: 1, forecast: [30], real: [29] },
-    { id: 2, timestamp: "2025-12-01T14:00:00Z", temperature_c: 30.1, device_id: 1, forecast: [31], real: [30] },
-    { id: 3, timestamp: "2025-12-01T13:00:00Z", temperature_c: 31.2, device_id: 1, forecast: [32], real: [31] },
-    { id: 4, timestamp: "2025-12-01T12:00:00Z", temperature_c: 30.8, device_id: 1, forecast: [31], real: [30] },
-    { id: 5, timestamp: "2025-09-20T11:00:00Z", temperature_c: 29.9, device_id: 1, forecast: [30], real: [29] },
-  ];
+export function getHistoricalSensorData({ limit = 10 } = {}) {
+  const data = [];
+  const now = new Date();
+
+  for (let i = 0; i < limit; i++) {
+    const timestamp = new Date(now.getTime() - i * 3600 * 1000); // Go back in time by hours
+    const temperature = parseFloat((Math.random() * 10 + 20).toFixed(2)); // 20-30 C
+    const humidity = parseFloat((Math.random() * 30 + 50).toFixed(2)); // 50-80%
+    const outside_temp = parseFloat((Math.random() * 15 + 15).toFixed(2)); // 15-30 C
+    const outside_humidity = parseFloat((Math.random() * 40 + 40).toFixed(2)); // 40-80%
+    const outside_pressure = parseFloat((Math.random() * 10 + 1000).toFixed(2)); // 1000-1010 hPa
+
+    data.push({
+      timestamp: timestamp.toISOString(),
+      label_id: `label_${Math.floor(Math.random() * 5) + 1}`,
+      session: `session_${Math.floor(Math.random() * 3) + 1}`,
+      temperature: temperature,
+      humidity: humidity,
+      day_of_week: timestamp.toLocaleString('en-US', { weekday: 'short' }),
+      hour_of_day: timestamp.getHours(),
+      outside_temp: outside_temp,
+      outside_humidity: outside_humidity,
+      outside_pressure: outside_pressure,
+      delta_temp: parseFloat((temperature - outside_temp).toFixed(2)),
+      delta_humidity: parseFloat((humidity - outside_humidity).toFixed(2)),
+    });
+  }
+  return data;
 }
   

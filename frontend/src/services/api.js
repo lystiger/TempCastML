@@ -2,7 +2,7 @@
 // During development, it currently imports functions from `fakeApi.js` to simulate backend responses.
 // In a production environment, these would typically be actual HTTP requests (e.g., using axios or the built-in fetch API)
 // to a live backend server.
-import { getCurrentTemperature, getPredictions, getHistory } from './fakeApi';
+import { getCurrentTemperature, getPredictions, getHistoricalSensorData as getHistoricalSensorDataFromFakeApi } from './fakeApi';
 
 // Define the base URL for the API. It tries to use an environment variable `VITE_API_URL`
 // (common in Vite projects) or defaults to `http://localhost:8000/api` for local development.
@@ -54,7 +54,7 @@ export const getPrediction = async (device_id = 1, horizon = 24) => {
 export const getHistoricalSensorData = async (params = {}) => {
   try {
     // Simulate fetching historical data from a backend.
-    const data = getHistory();
+    const data = getHistoricalSensorDataFromFakeApi(params);
     return data;
   } catch (error) {
     console.error("Failed to fetch historical sensor data:", error);

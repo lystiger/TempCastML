@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
-import { getHistoricalSensorData } from "../services/api";
+import { getHistoricalSensorData } from "../services/fakeApi";
 import { Table, Spinner, Alert, Row, Col, Card } from "react-bootstrap";
 import { TimeFormatContext } from "../contexts/TimeFormatContext";
 import { TemperatureUnitContext } from "../contexts/TemperatureUnitContext";
@@ -74,23 +74,35 @@ export default function History() {
         <Table striped bordered hover responsive className="card-hover">
           <thead>
             <tr>
-              <th>ID</th>
               <th>Timestamp</th>
+              <th>Label ID</th>
+              <th>Session</th>
               <th>Temperature ({getUnitSymbol()})</th>
-              <th>Device ID</th>
-              <th>Forecast ({getUnitSymbol()})</th>
-              <th>Real ({getUnitSymbol()})</th>
+              <th>Humidity</th>
+              <th>Day of Week</th>
+              <th>Hour of Day</th>
+              <th>Outside Temp ({getUnitSymbol()})</th>
+              <th>Outside Humidity</th>
+              <th>Outside Pressure</th>
+              <th>Delta Temp ({getUnitSymbol()})</th>
+              <th>Delta Humidity</th>
             </tr>
           </thead>
           <tbody>
-            {history.map((reading) => (
-              <tr key={reading.id}>
-                <td>{reading.id}</td>
+            {history.map((reading, index) => (
+              <tr key={index}>
                 <td>{new Date(reading.timestamp).toLocaleString([], { hour12: !is24hFormat })}</td>
-                <td>{convertTemperature(reading.temperature_c)?.toFixed(2)}</td>
-                <td>{reading.device_id}</td>
-                <td>{reading.forecast && reading.forecast.length > 0 ? convertTemperature(reading.forecast[0]).toFixed(2) : "N/A"}</td>
-                <td>{reading.real && reading.real.length > 0 ? convertTemperature(reading.real[0]).toFixed(2) : "N/A"}</td>
+                <td>{reading.label_id}</td>
+                <td>{reading.session}</td>
+                <td>{convertTemperature(reading.temperature)?.toFixed(2)}</td>
+                <td>{reading.humidity?.toFixed(2)}</td>
+                <td>{reading.day_of_week}</td>
+                <td>{reading.hour_of_day}</td>
+                <td>{convertTemperature(reading.outside_temp)?.toFixed(2)}</td>
+                <td>{reading.outside_humidity?.toFixed(2)}</td>
+                <td>{reading.outside_pressure?.toFixed(2)}</td>
+                <td>{convertTemperature(reading.delta_temp)?.toFixed(2)}</td>
+                <td>{reading.delta_humidity?.toFixed(2)}</td>
               </tr>
             ))}
           </tbody>
@@ -105,12 +117,18 @@ export default function History() {
             <Card.Body>
               <Card.Title>Glossary</Card.Title>
               <ul>
-                <li><strong>ID:</strong> Unique identifier for each sensor reading.</li>
                 <li><strong>Timestamp:</strong> The date and time when the sensor reading was recorded.</li>
-                <li><strong>Temperature ({getUnitSymbol()}):</strong> The actual temperature recorded by the sensor in {unit}.</li>
-                <li><strong>Device ID:</strong> The identifier of the sensor device.</li>
-                <li><strong>Forecast ({getUnitSymbol()}):</strong> The predicted temperature for a future point in time, in {unit}.</li>
-                <li><strong>Real ({getUnitSymbol()}):</strong> The actual temperature observed at a future point in time, in {unit}.</li>
+                <li><strong>Label ID:</strong> A unique identifier for the specific data label.</li>
+                <li><strong>Session:</strong> The identifier for the data collection session.</li>
+                <li><strong>Temperature ({getUnitSymbol()}):</strong> The indoor temperature recorded by the sensor in {unit}.</li>
+                <li><strong>Humidity:</strong> The indoor humidity recorded by the sensor.</li>
+                <li><strong>Day of Week:</strong> The day of the week when the reading was taken.</li>
+                <li><strong>Hour of Day:</strong> The hour of the day when the reading was taken.</li>
+                <li><strong>Outside Temp ({getUnitSymbol()}):</strong> The outdoor temperature at the time of the reading, in {unit}.</li>
+                <li><strong>Outside Humidity:</strong> The outdoor humidity at the time of the reading.</li>
+                <li><strong>Outside Pressure:</strong> The outdoor atmospheric pressure at the time of the reading.</li>
+                <li><strong>Delta Temp ({getUnitSymbol()}):</strong> The difference between indoor and outdoor temperature, in {unit}.</li>
+                <li><strong>Delta Humidity:</strong> The difference between indoor and outdoor humidity.</li>
               </ul>
             </Card.Body>
           </Card>

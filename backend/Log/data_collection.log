@@ -14,3 +14,9 @@
 2025-12-01 20:03:29,664 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 23°C, Độ ẩm 76%, Áp suất 1012 hPa
 2025-12-01 20:03:29,665 - INFO - Dữ liệu thời tiết đã được cập nhật trong thread.
 2025-12-01 20:03:31,503 - INFO - Kết nối thành công với /dev/ttyACM0 ở tốc độ 115200.
+2025-12-01 20:13:15,779 - INFO - Logger đã được thiết lập.
+2025-12-01 20:13:15,779 - INFO - Logger has been set up for API data collection.
+2025-12-01 20:13:15,780 - INFO - CSV file đã được tạo: /home/lystiger/Documents/TempCastML/Data/raw_data_api.csv
+2025-12-01 20:13:15,780 - INFO - Starting API data collection loop... Press Ctrl+C to stop.
+2025-12-01 20:13:15,977 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 23°C, Độ ẩm 76%, Áp suất 1012 hPa
+2025-12-01 20:13:15,978 - INFO - API data recorded: Temp=23, Hum=76, Pressure=1012

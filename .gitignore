@@ -25,10 +25,10 @@ Thumbs.db
 .env
 
 #Log file 
-../Log/*
+backend/Log/*
 
 #vscode config
 ./.vscode/*
 
 #my config
-./Settings/config.py
+./backend/Settings/config.py
