@@ -29,7 +29,7 @@ Thumbs.db
 backend/Log/*
 
 #vscode config
-./.vscode/*
+.vscode/
 
 #my config
 ./backend/Settings/config.py
