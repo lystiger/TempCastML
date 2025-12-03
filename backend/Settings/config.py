@@ -10,7 +10,12 @@ SESSION_ID = datetime.now().strftime("%Y%m%d_%H%M%S") #Ngày nhập dữ liệu
 
 #==================FILE PATH=============================
 
-BASE_DIR = os.path.join(os.getcwd(), "Data") # Thư mục Data trong thư mục hiện tại
+# Get the directory of the current config.py file
+CONFIG_DIR = os.path.dirname(os.path.abspath(__file__))
+# Construct the path to the backend directory
+BACKEND_DIR = os.path.join(CONFIG_DIR, "..")
+# Construct the path to the Data directory within the backend directory
+BASE_DIR = os.path.join(BACKEND_DIR, "Data")
 RAW_SENSOR_DATA = os.path.join(BASE_DIR, 'raw_data.csv') # Thư mục raw_data.csv trong thư mục Data
 RAW_API_DATA = os.path.join(BASE_DIR, 'raw_data_api.csv') # Thư mục raw_data_api.csv trong thư mục Data
 MERGED_DATA = os.path.join(BASE_DIR, 'merged_data.csv') # Thư mục merged_data.csv trong thư mục Data

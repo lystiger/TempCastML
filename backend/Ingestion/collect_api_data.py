@@ -46,9 +46,10 @@ def main():
                 with open(RAW_API_DATA, 'a', newline='') as csvfile:
                     writer = csv.writer(csvfile)
                     writer.writerow([
-                        timestamp, "api_data", session_id, # label_id and session_id are placeholders for API data
-                        outside_temp, outside_hum, day_of_week, hour_of_day,
-                        outside_temp, outside_hum, outside_pressure, # Duplicating for consistency with merged_data header
+                        timestamp, "api_data", session_id,
+                        None, None, # temperature and humidity are from sensor, not API
+                        day_of_week, hour_of_day,
+                        outside_temp, outside_hum, outside_pressure,
                         None, None # delta_temp, delta_humidity are not applicable for raw API data
                     ])
                 logger.info(f"API data recorded: Temp={outside_temp}, Hum={outside_hum}, Pressure={outside_pressure}")

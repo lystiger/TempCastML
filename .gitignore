@@ -17,6 +17,7 @@ __pycache__/
 # CSV or dataset files
 *.csv
 *.npy
+
 # Windows
 Thumbs.db
 .DS_Store
