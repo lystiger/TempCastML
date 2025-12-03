@@ -205,12 +205,18 @@ export default function Dashboard() {
               <Card className="h-100 card-hover">
                 <Card.Body>
                   <Card.Title>Today's Temperature</Card.Title>
-                  <div className="display-4 fw-bold">
-                    {getTodayAverage()}{getUnitSymbol()}
-                  </div>
-                  <Card.Text className="text-muted">
-                    {new Date().toLocaleDateString()}
-                  </Card.Text>
+                  {historicalData ? (
+                    <>
+                      <div className="display-4 fw-bold">
+                        {getTodayAverage()}{getUnitSymbol()}
+                      </div>
+                      <Card.Text className="text-muted">
+                        {new Date().toLocaleDateString()}
+                      </Card.Text>
+                    </>
+                  ) : (
+                    <Card.Text>No historical data available.</Card.Text>
+                  )}
                 </Card.Body>
               </Card>
             </Col>
