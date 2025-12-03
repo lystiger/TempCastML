@@ -15,7 +15,7 @@ __pycache__/
 *__init__.py
 
 # CSV or dataset files
-*.csv
+
 *.npy
 
 # Windows

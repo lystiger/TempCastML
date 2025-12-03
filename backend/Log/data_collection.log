@@ -47,3 +47,15 @@
 2025-12-02 17:44:08,859 - INFO - API data recorded: Temp=25, Hum=73, Pressure=1013
 2025-12-02 17:47:02,603 - INFO - API data collection stopped by user request.
 2025-12-02 17:47:02,604 - INFO - API data collection process finished.
+2025-12-03 13:46:58,502 - INFO - Logger đã được thiết lập.
+2025-12-03 13:46:58,502 - INFO - Logger has been set up for API data collection.
+2025-12-03 13:46:58,502 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/raw_data_api.csv
+2025-12-03 13:46:58,502 - INFO - Starting API data collection loop... Press Ctrl+C to stop.
+2025-12-03 13:46:58,642 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 24°C, Độ ẩm 65%, Áp suất 1018 hPa
+2025-12-03 13:46:58,642 - INFO - API data recorded: Temp=24, Hum=65, Pressure=1018
+2025-12-03 13:56:58,770 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 24°C, Độ ẩm 65%, Áp suất 1018 hPa
+2025-12-03 13:56:58,774 - INFO - API data recorded: Temp=24, Hum=65, Pressure=1018
+2025-12-03 14:06:59,362 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 24°C, Độ ẩm 64%, Áp suất 1018 hPa
+2025-12-03 14:06:59,363 - INFO - API data recorded: Temp=24, Hum=64, Pressure=1018
+2025-12-03 14:13:20,644 - INFO - API data collection stopped by user request.
+2025-12-03 14:13:20,645 - INFO - API data collection process finished.

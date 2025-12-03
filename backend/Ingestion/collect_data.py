@@ -119,9 +119,8 @@ def csv_init():
 def API_csv_init():
     header = [
         'timestamp','label_id','session',
-        'temperature','humidity','day_of_week','hour_of_day',
-        'outside_temp','outside_humidity','outside_pressure',
-        'delta_temp','delta_humidity'
+        'day_of_week','hour_of_day',
+        'outside_temp','outside_humidity','outside_pressure'
     ]
     return init_csv(RAW_API_DATA, header)
 
