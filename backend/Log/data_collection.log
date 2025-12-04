@@ -175,3 +175,159 @@
 2025-12-03 23:22:08,657 - INFO - API data recorded: Temp=20, Hum=58, Pressure=1021
 2025-12-03 23:25:47,916 - INFO - API data collection stopped by user request.
 2025-12-03 23:25:47,917 - INFO - API data collection process finished.
+2025-12-04 09:11:19,342 - INFO - Logger đã được thiết lập.
+2025-12-04 09:11:19,344 - INFO - Logger has been set up for API data collection.
+2025-12-04 09:11:19,344 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/raw_data_api.csv
+2025-12-04 09:11:19,344 - INFO - Starting API data collection loop... Press Ctrl+C to stop.
+2025-12-04 09:11:19,509 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 21°C, Độ ẩm 62%, Áp suất 1022 hPa
+2025-12-04 09:11:19,510 - INFO - API data recorded: Temp=21, Hum=62, Pressure=1022
+2025-12-04 09:21:19,719 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 21°C, Độ ẩm 61%, Áp suất 1022 hPa
+2025-12-04 09:21:19,721 - INFO - API data recorded: Temp=21, Hum=61, Pressure=1022
+2025-12-04 09:31:19,833 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 21°C, Độ ẩm 61%, Áp suất 1022 hPa
+2025-12-04 09:31:19,834 - INFO - API data recorded: Temp=21, Hum=61, Pressure=1022
+2025-12-04 09:41:20,952 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 58%, Áp suất 1022 hPa
+2025-12-04 09:41:20,954 - INFO - API data recorded: Temp=22, Hum=58, Pressure=1022
+2025-12-04 09:51:21,095 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 57%, Áp suất 1022 hPa
+2025-12-04 09:51:21,096 - INFO - API data recorded: Temp=22, Hum=57, Pressure=1022
+2025-12-04 10:01:21,216 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 57%, Áp suất 1022 hPa
+2025-12-04 10:01:21,217 - INFO - API data recorded: Temp=22, Hum=57, Pressure=1022
+2025-12-04 10:11:21,371 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 57%, Áp suất 1022 hPa
+2025-12-04 10:11:21,372 - INFO - API data recorded: Temp=22, Hum=57, Pressure=1022
+2025-12-04 10:21:21,569 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 59%, Áp suất 1022 hPa
+2025-12-04 10:21:21,570 - INFO - API data recorded: Temp=22, Hum=59, Pressure=1022
+2025-12-04 10:31:22,019 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 59%, Áp suất 1022 hPa
+2025-12-04 10:31:22,020 - INFO - API data recorded: Temp=22, Hum=59, Pressure=1022
+2025-12-04 10:41:22,168 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 57%, Áp suất 1021 hPa
+2025-12-04 10:41:22,169 - INFO - API data recorded: Temp=22, Hum=57, Pressure=1021
+2025-12-04 10:51:25,068 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 57%, Áp suất 1021 hPa
+2025-12-04 10:51:25,069 - INFO - API data recorded: Temp=22, Hum=57, Pressure=1021
+2025-12-04 11:01:25,233 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 57%, Áp suất 1021 hPa
+2025-12-04 11:01:25,234 - INFO - API data recorded: Temp=22, Hum=57, Pressure=1021
+2025-12-04 11:11:25,350 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 57%, Áp suất 1021 hPa
+2025-12-04 11:11:25,351 - INFO - API data recorded: Temp=22, Hum=57, Pressure=1021
+2025-12-04 11:21:25,494 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 23°C, Độ ẩm 59%, Áp suất 1021 hPa
+2025-12-04 11:21:25,495 - INFO - API data recorded: Temp=23, Hum=59, Pressure=1021
+2025-12-04 11:31:25,610 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 23°C, Độ ẩm 59%, Áp suất 1021 hPa
+2025-12-04 11:31:25,611 - INFO - API data recorded: Temp=23, Hum=59, Pressure=1021
+2025-12-04 11:41:25,781 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 23°C, Độ ẩm 57%, Áp suất 1020 hPa
+2025-12-04 11:41:25,782 - INFO - API data recorded: Temp=23, Hum=57, Pressure=1020
+2025-12-04 11:51:25,875 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 23°C, Độ ẩm 57%, Áp suất 1020 hPa
+2025-12-04 11:51:25,876 - INFO - API data recorded: Temp=23, Hum=57, Pressure=1020
+2025-12-04 11:51:28,401 - INFO - API data collection stopped by user request.
+2025-12-04 11:51:28,402 - INFO - API data collection process finished.
+2025-12-04 13:20:29,927 - INFO - Logger đã được thiết lập.
+2025-12-04 13:20:29,928 - INFO - Logger has been set up for API data collection.
+2025-12-04 13:20:29,928 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/raw_data_api.csv
+2025-12-04 13:20:29,929 - INFO - Starting API data collection loop... Press Ctrl+C to stop.
+2025-12-04 13:20:49,955 - ERROR - Lỗi khi lấy dữ liệu thời tiết (network): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7a37e3d12890>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2025-12-04 13:20:49,956 - WARNING - No API data fetched. Skipping write to CSV.
+2025-12-04 13:21:11,701 - INFO - API data collection stopped by user request.
+2025-12-04 13:21:11,702 - INFO - API data collection process finished.
+2025-12-04 13:21:27,338 - INFO - Logger đã được thiết lập.
+2025-12-04 13:21:27,338 - INFO - Logger has been set up for API data collection.
+2025-12-04 13:21:27,339 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/raw_data_api.csv
+2025-12-04 13:21:27,339 - INFO - Starting API data collection loop... Press Ctrl+C to stop.
+2025-12-04 13:21:30,200 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 24°C, Độ ẩm 57%, Áp suất 1019 hPa
+2025-12-04 13:21:30,201 - INFO - API data recorded: Temp=24, Hum=57, Pressure=1019
+2025-12-04 13:31:30,507 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 24°C, Độ ẩm 57%, Áp suất 1018 hPa
+2025-12-04 13:31:30,508 - INFO - API data recorded: Temp=24, Hum=57, Pressure=1018
+2025-12-04 13:41:31,172 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 24°C, Độ ẩm 57%, Áp suất 1018 hPa
+2025-12-04 13:41:31,173 - INFO - API data recorded: Temp=24, Hum=57, Pressure=1018
+2025-12-04 13:51:33,620 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 24°C, Độ ẩm 56%, Áp suất 1018 hPa
+2025-12-04 13:51:33,621 - INFO - API data recorded: Temp=24, Hum=56, Pressure=1018
+2025-12-04 14:01:43,881 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 24°C, Độ ẩm 56%, Áp suất 1018 hPa
+2025-12-04 14:01:43,882 - INFO - API data recorded: Temp=24, Hum=56, Pressure=1018
+2025-12-04 14:15:35,279 - ERROR - Lỗi khi lấy dữ liệu thời tiết (network): HTTPConnectionPool(host='api.openweathermap.org', port=80): Read timed out. (read timeout=10)
+2025-12-04 14:15:35,280 - WARNING - No API data fetched. Skipping write to CSV.
+2025-12-04 14:25:55,094 - ERROR - Lỗi khi lấy dữ liệu thời tiết (network): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f70417bc250>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2025-12-04 14:25:55,095 - WARNING - No API data fetched. Skipping write to CSV.
+2025-12-04 14:36:15,355 - ERROR - Lỗi khi lấy dữ liệu thời tiết (network): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7f70417be050>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2025-12-04 14:36:15,355 - WARNING - No API data fetched. Skipping write to CSV.
+2025-12-04 14:37:27,636 - INFO - API data collection stopped by user request.
+2025-12-04 14:37:27,636 - INFO - API data collection process finished.
+2025-12-04 14:37:29,258 - INFO - Logger đã được thiết lập.
+2025-12-04 14:37:29,259 - INFO - Logger has been set up for API data collection.
+2025-12-04 14:37:29,259 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/raw_data_api.csv
+2025-12-04 14:37:29,259 - INFO - Starting API data collection loop... Press Ctrl+C to stop.
+2025-12-04 14:37:49,285 - ERROR - Lỗi khi lấy dữ liệu thời tiết (network): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x76d7bbdb5210>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2025-12-04 14:37:49,285 - WARNING - No API data fetched. Skipping write to CSV.
+2025-12-04 14:40:21,620 - INFO - API data collection stopped by user request.
+2025-12-04 14:40:21,620 - INFO - API data collection process finished.
+2025-12-04 14:40:36,873 - INFO - Logger đã được thiết lập.
+2025-12-04 14:40:36,873 - INFO - Logger has been set up for API data collection.
+2025-12-04 14:40:36,874 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/raw_data_api.csv
+2025-12-04 14:40:36,874 - INFO - Starting API data collection loop... Press Ctrl+C to stop.
+2025-12-04 14:40:37,905 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 23°C, Độ ẩm 56%, Áp suất 1017 hPa
+2025-12-04 14:40:37,906 - INFO - API data recorded: Temp=23, Hum=56, Pressure=1017
+2025-12-04 14:50:42,937 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 23°C, Độ ẩm 57%, Áp suất 1017 hPa
+2025-12-04 14:50:42,938 - INFO - API data recorded: Temp=23, Hum=57, Pressure=1017
+2025-12-04 15:00:43,247 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 23°C, Độ ẩm 57%, Áp suất 1017 hPa
+2025-12-04 15:00:43,249 - INFO - API data recorded: Temp=23, Hum=57, Pressure=1017
+2025-12-04 15:10:44,424 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 23°C, Độ ẩm 58%, Áp suất 1018 hPa
+2025-12-04 15:10:44,425 - INFO - API data recorded: Temp=23, Hum=58, Pressure=1018
+2025-12-04 15:20:45,287 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 23°C, Độ ẩm 62%, Áp suất 1017 hPa
+2025-12-04 15:20:45,288 - INFO - API data recorded: Temp=23, Hum=62, Pressure=1017
+2025-12-04 15:39:13,292 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 24°C, Độ ẩm 61%, Áp suất 1017 hPa
+2025-12-04 15:39:13,293 - INFO - API data recorded: Temp=24, Hum=61, Pressure=1017
+2025-12-04 15:49:14,495 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 24°C, Độ ẩm 59%, Áp suất 1017 hPa
+2025-12-04 15:49:14,497 - INFO - API data recorded: Temp=24, Hum=59, Pressure=1017
+2025-12-04 16:47:46,868 - INFO - API data collection stopped by user request.
+2025-12-04 16:47:46,869 - INFO - API data collection process finished.
+2025-12-04 16:47:48,298 - INFO - Logger đã được thiết lập.
+2025-12-04 16:47:48,298 - INFO - Logger has been set up for API data collection.
+2025-12-04 16:47:48,298 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/raw_data_api.csv
+2025-12-04 16:47:48,298 - INFO - Starting API data collection loop... Press Ctrl+C to stop.
+2025-12-04 16:47:48,569 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 65%, Áp suất 1017 hPa
+2025-12-04 16:47:48,570 - INFO - API data recorded: Temp=22, Hum=65, Pressure=1017
+2025-12-04 16:57:48,831 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 64%, Áp suất 1018 hPa
+2025-12-04 16:57:48,833 - INFO - API data recorded: Temp=22, Hum=64, Pressure=1018
+2025-12-04 16:57:52,376 - INFO - API data collection stopped by user request.
+2025-12-04 16:57:52,376 - INFO - API data collection process finished.
+2025-12-04 17:00:10,651 - INFO - Logger đã được thiết lập.
+2025-12-04 17:00:10,652 - INFO - Logger has been set up for API data collection.
+2025-12-04 17:00:10,653 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/raw_data_api.csv
+2025-12-04 17:00:10,653 - INFO - Starting API data collection loop... Press Ctrl+C to stop.
+2025-12-04 17:00:11,274 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 64%, Áp suất 1018 hPa
+2025-12-04 17:00:11,280 - INFO - API data recorded: Temp=22, Hum=64, Pressure=1018
+2025-12-04 17:10:11,448 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 64%, Áp suất 1018 hPa
+2025-12-04 17:10:11,450 - INFO - API data recorded: Temp=22, Hum=64, Pressure=1018
+2025-12-04 17:20:00,819 - INFO - Logger đã được thiết lập.
+2025-12-04 17:20:01,023 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 66%, Áp suất 1018 hPa
+2025-12-04 17:20:11,926 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 66%, Áp suất 1018 hPa
+2025-12-04 17:20:11,926 - INFO - API data recorded: Temp=22, Hum=66, Pressure=1018
+2025-12-04 17:30:12,163 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 66%, Áp suất 1018 hPa
+2025-12-04 17:30:12,164 - INFO - API data recorded: Temp=22, Hum=66, Pressure=1018
+2025-12-04 17:40:17,686 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 66%, Áp suất 1018 hPa
+2025-12-04 17:40:17,686 - INFO - API data recorded: Temp=22, Hum=66, Pressure=1018
+2025-12-04 17:50:17,831 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 66%, Áp suất 1018 hPa
+2025-12-04 17:50:17,832 - INFO - API data recorded: Temp=22, Hum=66, Pressure=1018
+2025-12-04 18:00:18,018 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 66%, Áp suất 1018 hPa
+2025-12-04 18:00:18,019 - INFO - API data recorded: Temp=22, Hum=66, Pressure=1018
+2025-12-04 18:10:18,303 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 66%, Áp suất 1018 hPa
+2025-12-04 18:10:18,323 - INFO - API data recorded: Temp=22, Hum=66, Pressure=1018
+2025-12-04 18:20:18,564 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 67%, Áp suất 1018 hPa
+2025-12-04 18:20:18,565 - INFO - API data recorded: Temp=22, Hum=67, Pressure=1018
+2025-12-04 18:28:31,132 - INFO - API data collection stopped by user request.
+2025-12-04 18:28:31,136 - INFO - API data collection process finished.
+2025-12-04 18:31:18,112 - INFO - Logger đã được thiết lập.
+2025-12-04 18:31:18,113 - INFO - Logger has been set up for API data collection.
+2025-12-04 18:31:18,114 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/raw_data_api.csv
+2025-12-04 18:31:18,114 - INFO - Starting API data collection loop... Press Ctrl+C to stop.
+2025-12-04 18:31:18,425 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 67%, Áp suất 1018 hPa
+2025-12-04 18:31:18,429 - INFO - API data recorded: Temp=22, Hum=67, Pressure=1018
+2025-12-04 18:41:23,671 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 67%, Áp suất 1019 hPa
+2025-12-04 18:41:23,672 - INFO - API data recorded: Temp=22, Hum=67, Pressure=1019
+2025-12-04 18:51:23,923 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 67%, Áp suất 1019 hPa
+2025-12-04 18:51:23,925 - INFO - API data recorded: Temp=22, Hum=67, Pressure=1019
+2025-12-04 19:01:24,120 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 22°C, Độ ẩm 67%, Áp suất 1019 hPa
+2025-12-04 19:01:24,121 - INFO - API data recorded: Temp=22, Hum=67, Pressure=1019
+2025-12-04 19:11:24,294 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 21°C, Độ ẩm 67%, Áp suất 1019 hPa
+2025-12-04 19:11:24,294 - INFO - API data recorded: Temp=21, Hum=67, Pressure=1019
+2025-12-04 19:21:24,485 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 21°C, Độ ẩm 67%, Áp suất 1019 hPa
+2025-12-04 19:21:24,491 - INFO - API data recorded: Temp=21, Hum=67, Pressure=1019
+2025-12-04 19:31:24,708 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 21°C, Độ ẩm 69%, Áp suất 1019 hPa
+2025-12-04 19:31:24,709 - INFO - API data recorded: Temp=21, Hum=69, Pressure=1019
+2025-12-04 19:41:24,886 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 21°C, Độ ẩm 70%, Áp suất 1020 hPa
+2025-12-04 19:41:24,887 - INFO - API data recorded: Temp=21, Hum=70, Pressure=1020
+2025-12-04 19:51:25,105 - INFO - Lấy dữ liệu thời tiết thành công: Nhiệt độ 21°C, Độ ẩm 70%, Áp suất 1020 hPa
+2025-12-04 19:51:25,107 - INFO - API data recorded: Temp=21, Hum=70, Pressure=1020

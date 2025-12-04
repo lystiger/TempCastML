@@ -111,21 +111,13 @@ export default function Dashboard() {
   };
 
   const chartData = {
-    labels: predictionData?.forecast.map((_, index) => `+${index + 1}h`),
+    labels: predictionData?.forecast?.map((_, index) => `+${index + 1}h`),
     datasets: [
       {
         label: `Predicted Temperature (${getUnitSymbol()})`,
-        data: predictionData?.forecast.map(convertTemperature),
+        data: predictionData?.forecast?.map(convertTemperature),
         borderColor: "#0d6efd",
         backgroundColor: "rgba(13, 110, 253, 0.1)",
-        fill: true,
-        tension: 0.4,
-      },
-      {
-        label: `Real Temperature (${getUnitSymbol()})`,
-        data: predictionData?.real.map(convertTemperature),
-        borderColor: "#fd7e14",
-        backgroundColor: "rgba(253, 126, 20, 0.1)",
         fill: true,
         tension: 0.4,
       },
