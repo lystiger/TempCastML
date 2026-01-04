@@ -1,6 +1,6 @@
 import serial
 import serial.tools.list_ports
-import logging
+import logging.handlers
 import os
 import csv
 import sys
@@ -11,16 +11,30 @@ import threading
 from backend.Settings.config import BAUD_RATE, RAW_SENSOR_DATA, RAW_API_DATA, MERGED_DATA, LOG_FILE, API_KEY, CITY
 
 # ========================LOGGING=========================
-logging.basicConfig(
-    level=logging.INFO, # Chỉnh mức độ log (DEBUG < INFO < WARNING < ERROR < CRITICAL)
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler(LOG_FILE), # Ghi log vào file
-        logging.StreamHandler(sys.stdout) # Hiển thị log trên console
-    ]
+# Set up a logger
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+# Create a formatter
+formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+
+# Create a rotating file handler
+# This will create a new log file when the current one reaches 5MB
+# It will keep up to 5 old log files.
+file_handler = logging.handlers.RotatingFileHandler(
+    LOG_FILE, maxBytes=5*1024*1024, backupCount=5
 )
-logger = logging.getLogger() #
-logger.info("Logger đã được thiết lập.")
+file_handler.setFormatter(formatter)
+
+# Create a stream handler to also log to console
+stream_handler = logging.StreamHandler(sys.stdout)
+stream_handler.setFormatter(formatter)
+
+# Add the handlers to the logger
+logger.addHandler(file_handler)
+logger.addHandler(stream_handler)
+
+logger.info("Logger has been set up with log rotation.")
 
 # ========================IMPROVEMENTS==================
 def find_serial_port():
@@ -34,33 +48,26 @@ def find_serial_port():
     logger.warning("Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.")
     return None
 
-class WeatherUpdater(threading.Thread):
-    """Thread để cập nhật dữ liệu thời tiết định kỳ mà không block vòng lặp chính."""
-    def __init__(self, interval_seconds=600): # Mặc định 10 phút
-        super().__init__()
-        self.daemon = True # Thread sẽ tự tắt khi chương trình chính kết thúc
-        self.interval = interval_seconds
-        self.latest_weather_data = (None, None, None)
-        self.lock = threading.Lock()
-        self.stopped = threading.Event()
+def is_data_valid(temp, humidity):
+    """
+    Validates if the sensor readings are within a reasonable range.
+    
+    Args:
+        temp (float): The temperature reading.
+        humidity (float): The humidity reading.
+        
+    Returns:
+        bool: True if data is valid, False otherwise.
+    """
+    if not (-40 <= temp <= 60):
+        logger.warning(f"Invalid temperature reading: {temp}°C. Out of range (-40 to 60).")
+        return False
+    if not (0 <= humidity <= 100):
+        logger.warning(f"Invalid humidity reading: {humidity}%. Out of range (0 to 100).")
+        return False
+    return True
 
-    def run(self):
-        logger.info("Thread cập nhật thời tiết đã bắt đầu.")
-        while not self.stopped.is_set():
-            temp, humidity, pressure = get_weather()
-            if temp is not None:
-                with self.lock:
-                    self.latest_weather_data = (temp, humidity, pressure)
-                logger.info("Dữ liệu thời tiết đã được cập nhật trong thread.")
-            # Chờ cho đến lần cập nhật tiếp theo
-            self.stopped.wait(self.interval)
 
-    def get_latest_data(self):
-        with self.lock:
-            return self.latest_weather_data
-
-    def stop(self):
-        self.stopped.set()
 
 # ========================CONNECT==================
 def get_ports():
@@ -134,32 +141,41 @@ def merged_csv_init():
     return init_csv(MERGED_DATA, header)
 
 # =========================API Fetch=======================
-def get_weather():
-    try:
-        url = f"http://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric"
-        response = requests.get(url, timeout=10) # Thêm timeout
-        response.raise_for_status()  # raise error for bad HTTP status
-        data = response.json()
-        temp = data['main']['temp']
-        humidity = data['main']['humidity']
-        pressure = data['main']['pressure']
-        logger.info(f"Lấy dữ liệu thời tiết thành công: Nhiệt độ {temp}°C, Độ ẩm {humidity}%, Áp suất {pressure} hPa")
-        return temp, humidity, pressure
-    except requests.exceptions.RequestException as e:
-        logger.error(f"Lỗi khi lấy dữ liệu thời tiết (network): {e}")
-        return None, None, None
-    except Exception as e:
-        logger.error(f"Lỗi khi lấy dữ liệu thời tiết: {e}")
-        return None, None, None #Trả về None nếu có lỗi
+def get_weather(retries=3, backoff_factor=2):
+    """
+    Fetches weather data from OpenWeatherMap with a retry mechanism.
+    
+    Args:
+        retries (int): The maximum number of retries.
+        backoff_factor (int): The factor to increase delay by for each retry.
+    """
+    url = f"http://api.openweathermap.org/data/2.5/weather?q={CITY}&appid={API_KEY}&units=metric"
+    delay = backoff_factor
+    for i in range(retries):
+        try:
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()  # Raise an exception for bad status codes (4xx or 5xx)
+            data = response.json()
+            temp = data['main']['temp']
+            humidity = data['main']['humidity']
+            pressure = data['main']['pressure']
+            logger.info(f"Successfully fetched weather data: Temp {temp}°C, Humidity {humidity}%, Pressure {pressure} hPa")
+            return temp, humidity, pressure
+        except requests.exceptions.RequestException as e:
+            logger.warning(f"Network error fetching weather data (attempt {i+1}/{retries}): {e}")
+            if i < retries - 1:
+                logger.info(f"Retrying in {delay} seconds...")
+                time.sleep(delay)
+                delay *= backoff_factor
+            else:
+                logger.error("Failed to fetch weather data after multiple retries.")
+                return None, None, None
+    return None, None, None
 
 # =========================DATA COLLECTION LOOP=======================
 def main():
     # Khởi tạo CSV (chỉ cần merged)
     merged_csv_init()
-
-    # Khởi động thread cập nhật thời tiết
-    weather_thread = WeatherUpdater(interval_seconds=600) # 10 phút
-    weather_thread.start()
 
     ser = None
 
@@ -178,34 +194,47 @@ def main():
                     continue # Quay lại đầu vòng lặp
 
             try:
-                # 1. Đọc dữ liệu cảm biến từ ESP
+                # 1. Yêu cầu dữ liệu mới từ ESP
+                ser.reset_input_buffer() # Xóa buffer để đảm bảo dữ liệu mới
+                ser.write(b'R') # Gửi ký tự 'R' để yêu cầu dữ liệu
+                time.sleep(0.5) # Đợi ESP phản hồi
+
+                # 2. Đọc dữ liệu cảm biến từ ESP
                 line = ser.readline().decode('utf-8').strip()
                 if not line:
+                    logger.warning("Không nhận được dữ liệu từ ESP sau khi yêu cầu.")
+                    time.sleep(5)
                     continue
-                # Giả sử ESP gửi dạng "temperature,humidity,label_id"
+                
+                # Giả sử ESP gửi dạng "temperature,humidity"
                 try:
-                    temp, hum, label_id = line.split(',')
+                    temp, hum = line.split(',')
                     temp = float(temp)
                     hum = float(hum)
                 except (ValueError, IndexError) as e:
                     logger.warning(f"Dữ liệu nhận không hợp lệ: '{line}'. Lỗi: {e}")
                     continue
 
-                # 2. Lấy dữ liệu thời tiết ngoài trời từ thread
-                outside_temp, outside_hum, outside_pressure = weather_thread.get_latest_data()
+                # Validate sensor data
+                if not is_data_valid(temp, hum):
+                    continue
 
-                # 3. Tính delta nếu API hợp lệ
-                delta_temp = temp - outside_temp if outside_temp is not None else None
-                delta_hum = hum - outside_hum if outside_hum is not None else None
+                # 3. Lấy dữ liệu thời tiết ngoài trời trực tiếp
+                outside_temp, outside_hum, outside_pressure = get_weather()
 
-                # 4. Tạo timestamp và thời gian
+                # 4. Tạo timestamp và IDs
                 now = datetime.now()
                 day_of_week = now.strftime("%A")
                 hour_of_day = now.hour
                 timestamp = now.strftime("%Y-%m-%d %H:%M:%S")
                 session_id = now.strftime("%Y%m%d_%H%M%S")
+                label_id = session_id # Sử dụng session_id làm label_id
 
-                # 5. Ghi dữ liệu vào MERGED CSV
+                # 5. Tính delta nếu API hợp lệ
+                delta_temp = temp - outside_temp if outside_temp is not None else None
+                delta_hum = hum - outside_hum if outside_hum is not None else None
+
+                # 6. Ghi dữ liệu vào MERGED CSV
                 with open(MERGED_DATA, 'a', newline='') as csvfile:
                     writer = csv.writer(csvfile)
                     writer.writerow([
@@ -217,8 +246,8 @@ def main():
 
                 logger.info(f"Dữ liệu đã ghi: Temp={temp}, Hum={hum}, Label={label_id}")
 
-                # 6. Chờ 1 giây trước khi đọc dòng tiếp theo
-                time.sleep(1)
+                # 7. Chờ 10 phút trước khi yêu cầu tiếp theo
+                time.sleep(600)
 
             except serial.SerialException as e:
                 logger.error(f"Lỗi kết nối serial: {e}. Đang thử kết nối lại...")
@@ -237,9 +266,6 @@ def main():
         if ser and ser.is_open:
             ser.close()
             logger.info("Serial connection đã đóng.")
-        weather_thread.stop()
-        weather_thread.join() # Đợi thread kết thúc
-        logger.info("Weather update thread đã dừng.")
 
 # =========================ENTRY POINT=======================
 if __name__ == "__main__":

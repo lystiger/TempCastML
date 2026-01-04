@@ -1,6 +1,10 @@
 # Backend/main.py
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
+from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware # Import CORSMiddleware
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 from backend.Database.database import create_db_and_tables
 from backend.Routes.sensor_routes import router as sensor_router
 from backend.Routes.predict_routes import router as predict_router
@@ -12,8 +16,14 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 # Add the project root to the Python path to allow for absolute imports
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+# Create a Limiter instance
+limiter = Limiter(key_func=get_remote_address)
+
 # Create a FastAPI application instance
 app = FastAPI(title="TempCastML Backend")
+app.state.limiter = limiter
+app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
+
 
 # Add CORS middleware
 origins = [

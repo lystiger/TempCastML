@@ -1,15 +1,19 @@
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, HTTPException, Query, Request
 from sqlmodel import Session, select
 from datetime import datetime, timezone, timedelta
 from ..Database.database import engine
 from ..Database.models import Reading
 from ..AI.LTSM import predict_temperature
+from slowapi import Limiter
+from slowapi.util import get_remote_address
 
 # Create a new router for the prediction
 router = APIRouter()
+limiter = Limiter(key_func=get_remote_address)
 
 @router.get("/")
-def forecast(device_id: int, horizon: int = Query(24, description="Hours to predict")):
+@limiter.limit("10/minute")
+def forecast(request: Request, device_id: int, horizon: int = Query(24, description="Hours to predict")):
     """
     This endpoint generates a temperature forecast for a given device.
     It takes a device_id and an optional horizon in hours as input.

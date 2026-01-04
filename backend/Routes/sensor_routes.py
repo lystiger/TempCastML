@@ -1,11 +1,14 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Request
 from sqlmodel import Session, select
 from ..Database.database import engine
 from ..Database.models import Reading
 from pydantic import BaseModel
+from slowapi import Limiter
+from slowapi.util import get_remote_address
 
 # Create a new router for the sensor data
 router = APIRouter()
+limiter = Limiter(key_func=get_remote_address)
 
 class SensorData(BaseModel):
     """
@@ -16,7 +19,8 @@ class SensorData(BaseModel):
     temperature_c: float
 
 @router.post("/")
-def receive_data(data: SensorData):
+@limiter.limit("10/minute")
+def receive_data(request: Request, data: SensorData):
     """
     This endpoint receives sensor data via a POST request.
     The data is validated against the SensorData model.
@@ -35,7 +39,8 @@ def receive_data(data: SensorData):
     return db_reading
 
 @router.get("/latest")
-def get_latest_reading():
+@limiter.limit("10/minute")
+def get_latest_reading(request: Request):
     """
     Retrieves the latest sensor reading from the database.
     """
@@ -48,7 +53,8 @@ def get_latest_reading():
         return latest_reading
 
 @router.get("/history")
-def get_historical_readings(limit: int = 10):
+@limiter.limit("10/minute")
+def get_historical_readings(request: Request, limit: int = 10):
     """
     Retrieves a list of historical sensor readings from the database.
     """

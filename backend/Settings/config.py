@@ -1,8 +1,12 @@
 import os
 from datetime import datetime
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 #==================SERIAL CONFIG=========================
-SERIAL_PORT = 'COM4' #Nhớ chỉnh cổng trước khi lấy data
+SERIAL_PORT = os.getenv('SERIAL_PORT', 'COM4') #Nhớ chỉnh cổng trước khi lấy data
 BAUD_RATE = 115200
 DHT_SENSOR = 1
 TOTAL_SENSOR = DHT_SENSOR
@@ -32,7 +36,7 @@ CONFIG_DIR = os.path.dirname(os.path.abspath(__file__))
 LOG_FILE = os.path.join(CONFIG_DIR, "..", "Log", 'data_collection.log')
 
 # ------------------ API ---------------------
-API_KEY = "3752e6764a2889aea4649454ecab3d4d"  # Lên trang https://home.openweathermap.org/api_keys để lấy API key
+API_KEY = os.getenv('API_KEY')
 CITY = "Ha Noi, VN"
 
 #==================OTHER CONFIG=========================
