@@ -3084,3 +3084,310 @@
 2026-01-04 22:37:27,255 - INFO - Dữ liệu đã ghi: Temp=25.3, Hum=59.0, Label=20260104_223727
 2026-01-04 22:37:33,325 - INFO - Dừng thu thập dữ liệu theo yêu cầu người dùng.
 2026-01-04 22:37:33,327 - INFO - Serial connection đã đóng.
+2026-01-05 00:06:31,048 - INFO - Logger has been set up with log rotation.
+2026-01-05 00:06:31,050 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/merged_data.csv
+2026-01-05 00:06:31,050 - INFO - Bắt đầu vòng lặp thu thập dữ liệu... Nhấn Ctrl+C để dừng.
+2026-01-05 00:06:31,066 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:06:31,066 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:06:36,076 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:06:36,076 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:06:41,086 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:06:41,086 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:06:46,100 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:06:46,100 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:06:51,124 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:06:51,124 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:06:56,149 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:06:56,149 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:07:01,176 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:07:01,176 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:07:06,204 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:07:06,204 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:07:11,236 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:07:11,236 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:07:16,259 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:07:16,259 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:07:21,287 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:07:21,287 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:07:26,315 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:07:26,315 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:07:31,329 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:07:31,329 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:07:36,341 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:07:36,341 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 00:07:41,407 - WARNING - Không tìm thấy cổng serial phù hợp tự động. Sẽ thử cổng mặc định.
+2026-01-05 00:07:41,410 - ERROR - Không thể kết nối ESP. Thử lại sau 5 giây.
+2026-01-05 08:37:16,547 - INFO - Logger has been set up with log rotation.
+2026-01-05 08:37:16,548 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/merged_data.csv
+2026-01-05 08:37:16,548 - INFO - Bắt đầu vòng lặp thu thập dữ liệu... Nhấn Ctrl+C để dừng.
+2026-01-05 08:37:16,565 - INFO - Tìm thấy cổng phù hợp: /dev/ttyACM0 - USB JTAG/serial debug unit
+2026-01-05 08:37:18,660 - INFO - Kết nối thành công với /dev/ttyACM0 ở tốc độ 115200.
+2026-01-05 08:37:19,406 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 83%, Pressure 1023 hPa
+2026-01-05 08:37:19,408 - INFO - Dữ liệu đã ghi: Temp=21.8, Hum=69.0, Label=20260105_083719
+2026-01-05 08:47:20,841 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 83%, Pressure 1023 hPa
+2026-01-05 08:47:20,842 - INFO - Dữ liệu đã ghi: Temp=22.6, Hum=65.0, Label=20260105_084720
+2026-01-05 08:57:22,234 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 81%, Pressure 1023 hPa
+2026-01-05 08:57:22,235 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=63.0, Label=20260105_085722
+2026-01-05 09:07:23,663 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 81%, Pressure 1023 hPa
+2026-01-05 09:07:23,664 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=62.0, Label=20260105_090723
+2026-01-05 09:17:25,056 - INFO - Successfully fetched weather data: Temp 17°C, Humidity 81%, Pressure 1023 hPa
+2026-01-05 09:17:25,057 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=62.0, Label=20260105_091725
+2026-01-05 09:27:26,483 - INFO - Successfully fetched weather data: Temp 17°C, Humidity 79%, Pressure 1023 hPa
+2026-01-05 09:27:26,484 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=61.0, Label=20260105_092726
+2026-01-05 09:37:27,982 - INFO - Successfully fetched weather data: Temp 17°C, Humidity 79%, Pressure 1023 hPa
+2026-01-05 09:37:27,984 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=60.0, Label=20260105_093727
+2026-01-05 09:47:29,301 - INFO - Successfully fetched weather data: Temp 17°C, Humidity 78%, Pressure 1023 hPa
+2026-01-05 09:47:29,302 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=59.0, Label=20260105_094729
+2026-01-05 09:57:31,044 - INFO - Successfully fetched weather data: Temp 17°C, Humidity 78%, Pressure 1023 hPa
+2026-01-05 09:57:31,045 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=59.0, Label=20260105_095731
+2026-01-05 10:07:32,157 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 78%, Pressure 1023 hPa
+2026-01-05 10:07:32,158 - INFO - Dữ liệu đã ghi: Temp=23.5, Hum=58.0, Label=20260105_100732
+2026-01-05 10:17:33,580 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 78%, Pressure 1023 hPa
+2026-01-05 10:17:33,581 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=58.0, Label=20260105_101733
+2026-01-05 10:27:35,008 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 78%, Pressure 1023 hPa
+2026-01-05 10:27:35,009 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=57.0, Label=20260105_102735
+2026-01-05 10:37:36,410 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 77%, Pressure 1023 hPa
+2026-01-05 10:37:36,411 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=57.0, Label=20260105_103736
+2026-01-05 10:47:37,899 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 77%, Pressure 1023 hPa
+2026-01-05 10:47:37,901 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=56.0, Label=20260105_104737
+2026-01-05 10:57:39,271 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 79%, Pressure 1023 hPa
+2026-01-05 10:57:39,273 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=56.0, Label=20260105_105739
+2026-01-05 11:07:40,682 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 80%, Pressure 1023 hPa
+2026-01-05 11:07:40,683 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=55.0, Label=20260105_110740
+2026-01-05 11:17:42,081 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 80%, Pressure 1023 hPa
+2026-01-05 11:17:42,083 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=55.0, Label=20260105_111742
+2026-01-05 11:27:43,498 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 77%, Pressure 1024 hPa
+2026-01-05 11:27:43,499 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=55.0, Label=20260105_112743
+2026-01-05 11:37:44,903 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 75%, Pressure 1022 hPa
+2026-01-05 11:37:44,904 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=54.0, Label=20260105_113744
+2026-01-05 11:47:46,352 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 75%, Pressure 1022 hPa
+2026-01-05 11:47:46,353 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=54.0, Label=20260105_114746
+2026-01-05 11:57:47,753 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 75%, Pressure 1022 hPa
+2026-01-05 11:57:47,754 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=54.0, Label=20260105_115747
+2026-01-05 12:07:49,155 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 76%, Pressure 1022 hPa
+2026-01-05 12:07:49,157 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=54.0, Label=20260105_120749
+2026-01-05 12:17:50,576 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 76%, Pressure 1022 hPa
+2026-01-05 12:17:50,577 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=54.0, Label=20260105_121750
+2026-01-05 12:27:52,035 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 76%, Pressure 1023 hPa
+2026-01-05 12:27:52,037 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=54.0, Label=20260105_122752
+2026-01-05 12:37:53,409 - INFO - Successfully fetched weather data: Temp 16°C, Humidity 74%, Pressure 1021 hPa
+2026-01-05 12:37:53,410 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=54.0, Label=20260105_123753
+2026-01-05 12:47:54,809 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 74%, Pressure 1021 hPa
+2026-01-05 12:47:54,811 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=54.0, Label=20260105_124754
+2026-01-05 12:57:56,258 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 74%, Pressure 1021 hPa
+2026-01-05 12:57:56,259 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=54.0, Label=20260105_125756
+2026-01-05 13:07:57,671 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 74%, Pressure 1021 hPa
+2026-01-05 13:07:57,672 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=54.0, Label=20260105_130757
+2026-01-05 13:17:59,127 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 74%, Pressure 1021 hPa
+2026-01-05 13:17:59,128 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=54.0, Label=20260105_131759
+2026-01-05 13:28:00,521 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 74%, Pressure 1021 hPa
+2026-01-05 13:28:00,522 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=53.0, Label=20260105_132800
+2026-01-05 13:38:01,911 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1020 hPa
+2026-01-05 13:38:01,913 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=53.0, Label=20260105_133801
+2026-01-05 13:48:03,332 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1020 hPa
+2026-01-05 13:48:03,333 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=53.0, Label=20260105_134803
+2026-01-05 13:58:04,770 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 75%, Pressure 1021 hPa
+2026-01-05 13:58:04,771 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=53.0, Label=20260105_135804
+2026-01-05 14:08:06,169 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 76%, Pressure 1021 hPa
+2026-01-05 14:08:06,170 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=53.0, Label=20260105_140806
+2026-01-05 14:18:07,610 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 72%, Pressure 1021 hPa
+2026-01-05 14:18:07,612 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=53.0, Label=20260105_141807
+2026-01-05 14:28:09,069 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 72%, Pressure 1021 hPa
+2026-01-05 14:28:09,070 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=53.0, Label=20260105_142809
+2026-01-05 14:38:10,451 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 72%, Pressure 1020 hPa
+2026-01-05 14:38:10,452 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=53.0, Label=20260105_143810
+2026-01-05 14:48:11,814 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 72%, Pressure 1020 hPa
+2026-01-05 14:48:11,815 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=53.0, Label=20260105_144811
+2026-01-05 14:58:13,287 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 72%, Pressure 1020 hPa
+2026-01-05 14:58:13,288 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=53.0, Label=20260105_145813
+2026-01-05 15:08:14,714 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 72%, Pressure 1021 hPa
+2026-01-05 15:08:14,716 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=53.0, Label=20260105_150814
+2026-01-05 15:18:16,137 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 72%, Pressure 1021 hPa
+2026-01-05 15:18:16,139 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=53.0, Label=20260105_151816
+2026-01-05 15:28:17,511 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 72%, Pressure 1021 hPa
+2026-01-05 15:28:17,513 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=53.0, Label=20260105_152817
+2026-01-05 15:38:18,925 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 71%, Pressure 1020 hPa
+2026-01-05 15:38:18,926 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=53.0, Label=20260105_153818
+2026-01-05 15:48:20,332 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 71%, Pressure 1020 hPa
+2026-01-05 15:48:20,334 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=52.0, Label=20260105_154820
+2026-01-05 15:58:21,770 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 71%, Pressure 1020 hPa
+2026-01-05 15:58:21,772 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=53.0, Label=20260105_155821
+2026-01-05 16:08:23,154 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 72%, Pressure 1021 hPa
+2026-01-05 16:08:23,155 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=52.0, Label=20260105_160823
+2026-01-05 16:18:24,582 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1021 hPa
+2026-01-05 16:18:24,583 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=53.0, Label=20260105_161824
+2026-01-05 16:28:26,038 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1021 hPa
+2026-01-05 16:28:26,039 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=53.0, Label=20260105_162826
+2026-01-05 16:38:27,425 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1021 hPa
+2026-01-05 16:38:27,426 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=53.0, Label=20260105_163827
+2026-01-05 16:48:28,819 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1021 hPa
+2026-01-05 16:48:28,821 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=52.0, Label=20260105_164828
+2026-01-05 16:58:30,264 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1021 hPa
+2026-01-05 16:58:30,266 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=52.0, Label=20260105_165830
+2026-01-05 17:08:31,672 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1021 hPa
+2026-01-05 17:08:31,674 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=52.0, Label=20260105_170831
+2026-01-05 17:18:33,153 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1022 hPa
+2026-01-05 17:18:33,155 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=52.0, Label=20260105_171833
+2026-01-05 17:28:34,516 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1022 hPa
+2026-01-05 17:28:34,518 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=52.0, Label=20260105_172834
+2026-01-05 17:38:35,986 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1021 hPa
+2026-01-05 17:38:35,987 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=52.0, Label=20260105_173835
+2026-01-05 17:48:37,356 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1021 hPa
+2026-01-05 17:48:37,358 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=51.0, Label=20260105_174837
+2026-01-05 17:58:38,820 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1021 hPa
+2026-01-05 17:58:38,821 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=51.0, Label=20260105_175838
+2026-01-05 18:08:40,148 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1022 hPa
+2026-01-05 18:08:40,149 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=51.0, Label=20260105_180840
+2026-01-05 18:18:41,628 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1022 hPa
+2026-01-05 18:18:41,630 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=51.0, Label=20260105_181841
+2026-01-05 18:28:44,082 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1022 hPa
+2026-01-05 18:28:44,083 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=51.0, Label=20260105_182844
+2026-01-05 18:38:44,712 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1022 hPa
+2026-01-05 18:38:44,713 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=51.0, Label=20260105_183844
+2026-01-05 18:48:45,836 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1022 hPa
+2026-01-05 18:48:45,838 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=51.0, Label=20260105_184845
+2026-01-05 18:58:47,281 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1022 hPa
+2026-01-05 18:58:47,282 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=51.0, Label=20260105_185847
+2026-01-05 19:08:48,680 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1022 hPa
+2026-01-05 19:08:48,682 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=51.0, Label=20260105_190848
+2026-01-05 19:18:50,112 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1022 hPa
+2026-01-05 19:18:50,114 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=51.0, Label=20260105_191850
+2026-01-05 19:28:51,515 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1022 hPa
+2026-01-05 19:28:51,516 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=50.0, Label=20260105_192851
+2026-01-05 19:38:52,939 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1023 hPa
+2026-01-05 19:38:52,940 - INFO - Dữ liệu đã ghi: Temp=22.6, Hum=50.0, Label=20260105_193852
+2026-01-05 19:48:54,913 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1023 hPa
+2026-01-05 19:48:54,914 - INFO - Dữ liệu đã ghi: Temp=22.6, Hum=50.0, Label=20260105_194854
+2026-01-05 19:58:55,810 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1023 hPa
+2026-01-05 19:58:55,812 - INFO - Dữ liệu đã ghi: Temp=22.7, Hum=51.0, Label=20260105_195855
+2026-01-05 20:08:57,180 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1023 hPa
+2026-01-05 20:08:57,181 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=50.0, Label=20260105_200857
+2026-01-05 20:18:58,581 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1023 hPa
+2026-01-05 20:18:58,582 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=51.0, Label=20260105_201858
+2026-01-05 20:29:00,020 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1023 hPa
+2026-01-05 20:29:00,022 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=51.0, Label=20260105_202900
+2026-01-05 20:39:01,440 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1023 hPa
+2026-01-05 20:39:01,442 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=51.0, Label=20260105_203901
+2026-01-05 20:49:02,827 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 20:49:02,828 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=51.0, Label=20260105_204902
+2026-01-05 20:59:04,277 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 20:59:04,279 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=50.0, Label=20260105_205904
+2026-01-05 21:09:05,676 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 21:09:05,678 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=50.0, Label=20260105_210905
+2026-01-05 21:19:07,122 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 21:19:07,124 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=50.0, Label=20260105_211907
+2026-01-05 21:29:08,543 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 21:29:08,544 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=51.0, Label=20260105_212908
+2026-01-05 21:39:09,944 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 21:39:09,945 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=51.0, Label=20260105_213909
+2026-01-05 21:49:11,403 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 21:49:11,405 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=51.0, Label=20260105_214911
+2026-01-05 21:59:12,776 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 21:59:12,778 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=51.0, Label=20260105_215912
+2026-01-05 22:09:14,198 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 22:09:14,200 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=51.0, Label=20260105_220914
+2026-01-05 22:19:15,569 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 22:19:15,570 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=51.0, Label=20260105_221915
+2026-01-05 22:29:17,036 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 22:29:17,037 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=52.0, Label=20260105_222917
+2026-01-05 22:39:18,443 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 22:39:18,444 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=51.0, Label=20260105_223918
+2026-01-05 22:49:19,820 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 22:49:19,821 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=51.0, Label=20260105_224919
+2026-01-05 22:59:21,301 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 22:59:21,302 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=52.0, Label=20260105_225921
+2026-01-05 23:09:22,709 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 23:09:22,711 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=52.0, Label=20260105_230922
+2026-01-05 23:19:24,136 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 23:19:24,137 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=52.0, Label=20260105_231924
+2026-01-05 23:29:25,518 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-05 23:29:25,519 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=52.0, Label=20260105_232925
+2026-01-05 23:39:26,958 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1023 hPa
+2026-01-05 23:39:26,960 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=52.0, Label=20260105_233926
+2026-01-05 23:49:48,224 - WARNING - Network error fetching weather data (attempt 1/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7ea014fad550>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-05 23:49:48,225 - INFO - Retrying in 2 seconds...
+2026-01-05 23:50:10,252 - WARNING - Network error fetching weather data (attempt 2/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7ea016780cd0>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-05 23:50:10,253 - INFO - Retrying in 4 seconds...
+2026-01-05 23:50:34,280 - WARNING - Network error fetching weather data (attempt 3/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7ea014fafa90>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-05 23:50:34,281 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-05 23:50:34,282 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=52.0, Label=20260105_235034
+2026-01-06 00:00:34,784 - WARNING - Dữ liệu nhận không hợp lệ: '0'. Lỗi: not enough values to unpack (expected 2, got 1)
+2026-01-06 00:25:40,338 - INFO - Logger has been set up with log rotation.
+2026-01-06 00:25:40,339 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/merged_data.csv
+2026-01-06 00:25:40,339 - INFO - Bắt đầu vòng lặp thu thập dữ liệu... Nhấn Ctrl+C để dừng.
+2026-01-06 00:25:40,356 - INFO - Tìm thấy cổng phù hợp: /dev/ttyACM0 - USB JTAG/serial debug unit
+2026-01-06 00:25:42,451 - INFO - Kết nối thành công với /dev/ttyACM0 ở tốc độ 115200.
+2026-01-06 00:25:55,601 - WARNING - Network error fetching weather data (attempt 1/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x7e48de119810>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-06 00:25:55,602 - INFO - Retrying in 2 seconds...
+2026-01-06 00:25:58,165 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 67%, Pressure 1024 hPa
+2026-01-06 00:25:58,166 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=57.0, Label=20260106_002558
+2026-01-06 00:35:59,676 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1023 hPa
+2026-01-06 00:35:59,677 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=53.0, Label=20260106_003559
+2026-01-06 00:46:01,122 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 68%, Pressure 1023 hPa
+2026-01-06 00:46:01,123 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=52.0, Label=20260106_004601
+2026-01-06 00:56:02,547 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 69%, Pressure 1023 hPa
+2026-01-06 00:56:02,547 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=51.0, Label=20260106_005602
+2026-01-06 01:06:03,956 - INFO - Successfully fetched weather data: Temp 15°C, Humidity 69%, Pressure 1023 hPa
+2026-01-06 01:06:03,958 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=51.0, Label=20260106_010603
+2026-01-06 01:16:05,352 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 69%, Pressure 1023 hPa
+2026-01-06 01:16:05,353 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=51.0, Label=20260106_011605
+2026-01-06 01:26:06,786 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 69%, Pressure 1023 hPa
+2026-01-06 01:26:06,787 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=50.0, Label=20260106_012606
+2026-01-06 01:36:08,185 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 70%, Pressure 1023 hPa
+2026-01-06 01:36:08,186 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=50.0, Label=20260106_013608
+2026-01-06 01:46:14,589 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 70%, Pressure 1023 hPa
+2026-01-06 01:46:14,590 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=50.0, Label=20260106_014614
+2026-01-06 01:56:15,360 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 71%, Pressure 1023 hPa
+2026-01-06 01:56:15,362 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=50.0, Label=20260106_015615
+2026-01-06 02:06:16,684 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 71%, Pressure 1024 hPa
+2026-01-06 02:06:16,685 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=50.0, Label=20260106_020616
+2026-01-06 02:16:17,917 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 71%, Pressure 1024 hPa
+2026-01-06 02:16:17,918 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=50.0, Label=20260106_021617
+2026-01-06 02:26:19,356 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 71%, Pressure 1024 hPa
+2026-01-06 02:26:19,356 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=50.0, Label=20260106_022619
+2026-01-06 02:36:20,723 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 71%, Pressure 1023 hPa
+2026-01-06 02:36:20,725 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=50.0, Label=20260106_023620
+2026-01-06 02:46:22,184 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 71%, Pressure 1023 hPa
+2026-01-06 02:46:22,185 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=50.0, Label=20260106_024622
+2026-01-06 02:56:23,547 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 71%, Pressure 1023 hPa
+2026-01-06 02:56:23,548 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_025623
+2026-01-06 03:06:25,042 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1024 hPa
+2026-01-06 03:06:25,043 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_030625
+2026-01-06 03:16:26,427 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1024 hPa
+2026-01-06 03:16:26,428 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_031626
+2026-01-06 03:26:27,821 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1024 hPa
+2026-01-06 03:26:27,822 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_032627
+2026-01-06 03:36:29,280 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1023 hPa
+2026-01-06 03:36:29,281 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_033629
+2026-01-06 03:46:30,676 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1023 hPa
+2026-01-06 03:46:30,677 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_034630
+2026-01-06 03:56:32,074 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1023 hPa
+2026-01-06 03:56:32,076 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_035632
+2026-01-06 04:06:33,635 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1024 hPa
+2026-01-06 04:06:33,637 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_040633
+2026-01-06 04:16:34,878 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1024 hPa
+2026-01-06 04:16:34,880 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_041634
+2026-01-06 04:26:36,272 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1024 hPa
+2026-01-06 04:26:36,273 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_042636
+2026-01-06 04:36:37,708 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1024 hPa
+2026-01-06 04:36:37,709 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_043637
+2026-01-06 04:46:39,151 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1024 hPa
+2026-01-06 04:46:39,153 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_044639
+2026-01-06 04:56:40,511 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1024 hPa
+2026-01-06 04:56:40,513 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_045640
+2026-01-06 05:06:42,001 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1024 hPa
+2026-01-06 05:06:42,003 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=49.0, Label=20260106_050642
+2026-01-06 05:16:43,422 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1024 hPa
+2026-01-06 05:16:43,423 - INFO - Dữ liệu đã ghi: Temp=23.5, Hum=49.0, Label=20260106_051643
+2026-01-06 05:26:44,804 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1025 hPa
+2026-01-06 05:26:44,805 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=49.0, Label=20260106_052644
+2026-01-06 05:36:46,208 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1025 hPa
+2026-01-06 05:36:46,209 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=49.0, Label=20260106_053646
+2026-01-06 05:46:47,706 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1025 hPa
+2026-01-06 05:46:47,707 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_054647
+2026-01-06 05:56:49,139 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 71%, Pressure 1025 hPa
+2026-01-06 05:56:49,140 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=49.0, Label=20260106_055649
+2026-01-06 06:06:55,673 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 72%, Pressure 1025 hPa
+2026-01-06 06:06:55,674 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=48.0, Label=20260106_060655
+2026-01-06 06:13:59,054 - INFO - Dừng thu thập dữ liệu theo yêu cầu người dùng.
+2026-01-06 06:13:59,056 - INFO - Serial connection đã đóng.
