@@ -3585,3 +3585,308 @@
 2026-01-06 20:06:43,133 - INFO - Dữ liệu đã ghi: Temp=21.0, Hum=49.0, Label=20260106_200643
 2026-01-06 20:16:44,510 - INFO - Successfully fetched weather data: Temp 14°C, Humidity 76%, Pressure 1027 hPa
 2026-01-06 20:16:44,510 - INFO - Dữ liệu đã ghi: Temp=21.0, Hum=50.0, Label=20260106_201644
+2026-01-06 21:48:13,395 - INFO - Logger has been set up with log rotation.
+2026-01-06 21:48:13,396 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/merged_data.csv
+2026-01-06 21:48:13,396 - INFO - Bắt đầu vòng lặp thu thập dữ liệu... Nhấn Ctrl+C để dừng.
+2026-01-06 21:48:13,410 - INFO - Tìm thấy cổng phù hợp: /dev/ttyACM0 - USB JTAG/serial debug unit
+2026-01-06 21:48:15,504 - INFO - Kết nối thành công với /dev/ttyACM0 ở tốc độ 115200.
+2026-01-06 21:48:16,192 - INFO - Successfully fetched weather data: Temp 12°C, Humidity 75%, Pressure 1027 hPa
+2026-01-06 21:48:16,193 - INFO - Dữ liệu đã ghi: Temp=21.1, Hum=52.0, Label=20260106_214816
+2026-01-06 21:58:17,367 - INFO - Successfully fetched weather data: Temp 12°C, Humidity 76%, Pressure 1027 hPa
+2026-01-06 21:58:17,369 - INFO - Dữ liệu đã ghi: Temp=22.6, Hum=50.0, Label=20260106_215817
+2026-01-06 22:08:18,761 - INFO - Successfully fetched weather data: Temp 12°C, Humidity 81%, Pressure 1028 hPa
+2026-01-06 22:08:18,762 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=49.0, Label=20260106_220818
+2026-01-06 22:18:20,199 - INFO - Successfully fetched weather data: Temp 12°C, Humidity 81%, Pressure 1028 hPa
+2026-01-06 22:18:20,201 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_221820
+2026-01-06 22:28:21,617 - INFO - Successfully fetched weather data: Temp 12°C, Humidity 82%, Pressure 1028 hPa
+2026-01-06 22:28:21,618 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_222821
+2026-01-06 22:38:23,035 - INFO - Successfully fetched weather data: Temp 12°C, Humidity 78%, Pressure 1027 hPa
+2026-01-06 22:38:23,036 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=49.0, Label=20260106_223823
+2026-01-06 22:48:24,452 - INFO - Successfully fetched weather data: Temp 11°C, Humidity 78%, Pressure 1027 hPa
+2026-01-06 22:48:24,453 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_224824
+2026-01-06 22:58:25,832 - INFO - Successfully fetched weather data: Temp 11°C, Humidity 80%, Pressure 1027 hPa
+2026-01-06 22:58:25,833 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_225825
+2026-01-06 23:08:27,293 - INFO - Successfully fetched weather data: Temp 11°C, Humidity 85%, Pressure 1027 hPa
+2026-01-06 23:08:27,294 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_230827
+2026-01-06 23:18:28,644 - INFO - Successfully fetched weather data: Temp 11°C, Humidity 85%, Pressure 1027 hPa
+2026-01-06 23:18:28,645 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_231828
+2026-01-06 23:28:30,044 - INFO - Successfully fetched weather data: Temp 11°C, Humidity 87%, Pressure 1028 hPa
+2026-01-06 23:28:30,045 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260106_232830
+2026-01-06 23:38:32,544 - INFO - Successfully fetched weather data: Temp 11°C, Humidity 82%, Pressure 1027 hPa
+2026-01-06 23:38:32,546 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=49.0, Label=20260106_233832
+2026-01-06 23:48:33,327 - INFO - Successfully fetched weather data: Temp 11°C, Humidity 81%, Pressure 1026 hPa
+2026-01-06 23:48:33,328 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=49.0, Label=20260106_234833
+2026-01-06 23:58:34,601 - INFO - Successfully fetched weather data: Temp 11°C, Humidity 81%, Pressure 1026 hPa
+2026-01-06 23:58:34,602 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=49.0, Label=20260106_235834
+2026-01-07 00:08:35,714 - INFO - Successfully fetched weather data: Temp 11°C, Humidity 86%, Pressure 1027 hPa
+2026-01-07 00:08:35,715 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=49.0, Label=20260107_000835
+2026-01-07 00:18:37,162 - INFO - Successfully fetched weather data: Temp 11°C, Humidity 83%, Pressure 1027 hPa
+2026-01-07 00:18:37,163 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260107_001837
+2026-01-07 00:28:58,405 - WARNING - Network error fetching weather data (attempt 1/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x70bea4551fd0>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-07 00:28:58,406 - INFO - Retrying in 2 seconds...
+2026-01-07 00:29:20,433 - WARNING - Network error fetching weather data (attempt 2/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x70bea454f290>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-07 00:29:20,434 - INFO - Retrying in 4 seconds...
+2026-01-07 00:29:44,462 - WARNING - Network error fetching weather data (attempt 3/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x70bea4553b10>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-07 00:29:44,463 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 00:29:44,464 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260107_002944
+2026-01-07 00:39:44,967 - WARNING - Invalid temperature reading: 230.0°C. Out of range (-40 to 60).
+2026-01-07 00:40:06,743 - WARNING - Network error fetching weather data (attempt 1/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x70bea45759d0>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-07 00:40:06,744 - INFO - Retrying in 2 seconds...
+2026-01-07 00:40:28,765 - WARNING - Network error fetching weather data (attempt 2/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x70bea4577950>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-07 00:40:28,766 - INFO - Retrying in 4 seconds...
+2026-01-07 00:40:52,794 - WARNING - Network error fetching weather data (attempt 3/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x70bea4579910>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-07 00:40:52,795 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 00:40:52,796 - INFO - Dữ liệu đã ghi: Temp=23.8, Hum=49.0, Label=20260107_004052
+2026-01-07 00:51:13,324 - WARNING - Network error fetching weather data (attempt 1/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x70bea4577450>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-07 00:51:13,324 - INFO - Retrying in 2 seconds...
+2026-01-07 00:51:35,352 - WARNING - Network error fetching weather data (attempt 2/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x70bea45765d0>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-07 00:51:35,353 - INFO - Retrying in 4 seconds...
+2026-01-07 00:51:59,380 - WARNING - Network error fetching weather data (attempt 3/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x70bea4575610>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-07 00:51:59,381 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 00:51:59,382 - INFO - Dữ liệu đã ghi: Temp=0.0, Hum=49.0, Label=20260107_005159
+2026-01-07 01:02:19,908 - WARNING - Network error fetching weather data (attempt 1/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x70bea4552490>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-07 01:02:19,909 - INFO - Retrying in 2 seconds...
+2026-01-07 01:02:41,936 - WARNING - Network error fetching weather data (attempt 2/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x70bea457a810>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-07 01:02:41,937 - INFO - Retrying in 4 seconds...
+2026-01-07 01:03:05,964 - WARNING - Network error fetching weather data (attempt 3/3): HTTPConnectionPool(host='api.openweathermap.org', port=80): Max retries exceeded with url: /data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric (Caused by NameResolutionError("<urllib3.connection.HTTPConnection object at 0x70bea457b7d0>: Failed to resolve 'api.openweathermap.org' ([Errno -3] Temporary failure in name resolution)"))
+2026-01-07 01:03:05,965 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 01:03:05,966 - INFO - Dữ liệu đã ghi: Temp=0.0, Hum=49.0, Label=20260107_010305
+2026-01-07 01:13:06,467 - WARNING - Không nhận được dữ liệu từ ESP sau khi yêu cầu.
+2026-01-07 01:13:12,015 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:13:12,016 - INFO - Retrying in 2 seconds...
+2026-01-07 01:13:14,065 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:13:14,066 - INFO - Retrying in 4 seconds...
+2026-01-07 01:13:18,116 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:13:18,116 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 01:13:18,117 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=49.0, Label=20260107_011318
+2026-01-07 01:23:19,267 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:23:19,267 - INFO - Retrying in 2 seconds...
+2026-01-07 01:23:21,343 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:23:21,344 - INFO - Retrying in 4 seconds...
+2026-01-07 01:23:25,591 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:23:25,592 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 01:23:25,593 - INFO - Dữ liệu đã ghi: Temp=23.4, Hum=49.0, Label=20260107_012325
+2026-01-07 01:33:26,981 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:33:26,981 - INFO - Retrying in 2 seconds...
+2026-01-07 01:33:29,041 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:33:29,042 - INFO - Retrying in 4 seconds...
+2026-01-07 01:33:33,096 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:33:33,096 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 01:33:33,097 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=49.0, Label=20260107_013333
+2026-01-07 01:43:34,256 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:43:34,257 - INFO - Retrying in 2 seconds...
+2026-01-07 01:43:36,325 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:43:36,326 - INFO - Retrying in 4 seconds...
+2026-01-07 01:43:40,400 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:43:40,401 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 01:43:40,401 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=49.0, Label=20260107_014340
+2026-01-07 01:53:41,757 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:53:41,757 - INFO - Retrying in 2 seconds...
+2026-01-07 01:53:43,833 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:53:43,834 - INFO - Retrying in 4 seconds...
+2026-01-07 01:53:47,882 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 01:53:47,882 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 01:53:47,883 - INFO - Dữ liệu đã ghi: Temp=23.0, Hum=49.0, Label=20260107_015347
+2026-01-07 02:03:49,233 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:03:49,234 - INFO - Retrying in 2 seconds...
+2026-01-07 02:03:51,304 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:03:51,305 - INFO - Retrying in 4 seconds...
+2026-01-07 02:03:55,351 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:03:55,352 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 02:03:55,353 - INFO - Dữ liệu đã ghi: Temp=22.6, Hum=49.0, Label=20260107_020355
+2026-01-07 02:13:56,727 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:13:56,728 - INFO - Retrying in 2 seconds...
+2026-01-07 02:13:58,980 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:13:58,980 - INFO - Retrying in 4 seconds...
+2026-01-07 02:14:03,058 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:14:03,058 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 02:14:03,059 - INFO - Dữ liệu đã ghi: Temp=22.6, Hum=49.0, Label=20260107_021403
+2026-01-07 02:24:04,194 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:24:04,195 - INFO - Retrying in 2 seconds...
+2026-01-07 02:24:06,252 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:24:06,252 - INFO - Retrying in 4 seconds...
+2026-01-07 02:24:10,306 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:24:10,306 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 02:24:10,308 - INFO - Dữ liệu đã ghi: Temp=22.6, Hum=49.0, Label=20260107_022410
+2026-01-07 02:34:11,896 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:34:11,896 - INFO - Retrying in 2 seconds...
+2026-01-07 02:34:13,945 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:34:13,946 - INFO - Retrying in 4 seconds...
+2026-01-07 02:34:17,997 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:34:17,997 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 02:34:17,998 - INFO - Dữ liệu đã ghi: Temp=22.6, Hum=49.0, Label=20260107_023417
+2026-01-07 02:44:19,185 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:44:19,185 - INFO - Retrying in 2 seconds...
+2026-01-07 02:44:21,269 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:44:21,270 - INFO - Retrying in 4 seconds...
+2026-01-07 02:44:25,326 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:44:25,326 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 02:44:25,327 - INFO - Dữ liệu đã ghi: Temp=22.6, Hum=49.0, Label=20260107_024425
+2026-01-07 02:54:26,707 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:54:26,708 - INFO - Retrying in 2 seconds...
+2026-01-07 02:54:28,771 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:54:28,771 - INFO - Retrying in 4 seconds...
+2026-01-07 02:54:32,821 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 02:54:32,821 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 02:54:32,822 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=49.0, Label=20260107_025432
+2026-01-07 03:04:34,167 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:04:34,167 - INFO - Retrying in 2 seconds...
+2026-01-07 03:04:36,247 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:04:36,247 - INFO - Retrying in 4 seconds...
+2026-01-07 03:04:40,310 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:04:40,310 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 03:04:40,311 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=49.0, Label=20260107_030440
+2026-01-07 03:14:41,646 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:14:41,646 - INFO - Retrying in 2 seconds...
+2026-01-07 03:14:43,701 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:14:43,701 - INFO - Retrying in 4 seconds...
+2026-01-07 03:14:47,776 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:14:47,776 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 03:14:47,777 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=49.0, Label=20260107_031447
+2026-01-07 03:24:49,134 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:24:49,135 - INFO - Retrying in 2 seconds...
+2026-01-07 03:24:51,187 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:24:51,187 - INFO - Retrying in 4 seconds...
+2026-01-07 03:24:55,275 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:24:55,276 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 03:24:55,277 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=49.0, Label=20260107_032455
+2026-01-07 03:34:56,633 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:34:56,633 - INFO - Retrying in 2 seconds...
+2026-01-07 03:34:58,720 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:34:58,721 - INFO - Retrying in 4 seconds...
+2026-01-07 03:35:02,769 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:35:02,769 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 03:35:02,770 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=49.0, Label=20260107_033502
+2026-01-07 03:45:04,124 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:45:04,125 - INFO - Retrying in 2 seconds...
+2026-01-07 03:45:06,378 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:45:06,379 - INFO - Retrying in 4 seconds...
+2026-01-07 03:45:10,464 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:45:10,465 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 03:45:10,466 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=49.0, Label=20260107_034510
+2026-01-07 03:55:11,653 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:55:11,654 - INFO - Retrying in 2 seconds...
+2026-01-07 03:55:13,715 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:55:13,716 - INFO - Retrying in 4 seconds...
+2026-01-07 03:55:17,773 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 03:55:17,773 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 03:55:17,774 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=49.0, Label=20260107_035517
+2026-01-07 04:05:19,097 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:05:19,097 - INFO - Retrying in 2 seconds...
+2026-01-07 04:05:21,152 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:05:21,153 - INFO - Retrying in 4 seconds...
+2026-01-07 04:05:25,230 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:05:25,231 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 04:05:25,231 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=49.0, Label=20260107_040525
+2026-01-07 04:15:26,584 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:15:26,584 - INFO - Retrying in 2 seconds...
+2026-01-07 04:15:28,643 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:15:28,644 - INFO - Retrying in 4 seconds...
+2026-01-07 04:15:32,708 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:15:32,709 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 04:15:32,709 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=49.0, Label=20260107_041532
+2026-01-07 04:25:34,075 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:25:34,076 - INFO - Retrying in 2 seconds...
+2026-01-07 04:25:36,126 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:25:36,126 - INFO - Retrying in 4 seconds...
+2026-01-07 04:25:40,382 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:25:40,383 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 04:25:40,384 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=49.0, Label=20260107_042540
+2026-01-07 04:35:41,552 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:35:41,553 - INFO - Retrying in 2 seconds...
+2026-01-07 04:35:43,611 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:35:43,611 - INFO - Retrying in 4 seconds...
+2026-01-07 04:35:47,668 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:35:47,669 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 04:35:47,670 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=49.0, Label=20260107_043547
+2026-01-07 04:45:49,246 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:45:49,247 - INFO - Retrying in 2 seconds...
+2026-01-07 04:45:51,296 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:45:51,296 - INFO - Retrying in 4 seconds...
+2026-01-07 04:45:55,350 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:45:55,350 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 04:45:55,351 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=49.0, Label=20260107_044555
+2026-01-07 04:55:56,530 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:55:56,530 - INFO - Retrying in 2 seconds...
+2026-01-07 04:55:58,625 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:55:58,626 - INFO - Retrying in 4 seconds...
+2026-01-07 04:56:02,673 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 04:56:02,674 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 04:56:02,675 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=50.0, Label=20260107_045602
+2026-01-07 05:06:04,019 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:06:04,019 - INFO - Retrying in 2 seconds...
+2026-01-07 05:06:06,095 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:06:06,096 - INFO - Retrying in 4 seconds...
+2026-01-07 05:06:10,144 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:06:10,145 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 05:06:10,146 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=50.0, Label=20260107_050610
+2026-01-07 05:16:11,524 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:16:11,525 - INFO - Retrying in 2 seconds...
+2026-01-07 05:16:13,597 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:16:13,598 - INFO - Retrying in 4 seconds...
+2026-01-07 05:16:17,646 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:16:17,647 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 05:16:17,647 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=50.0, Label=20260107_051617
+2026-01-07 05:26:19,000 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:26:19,001 - INFO - Retrying in 2 seconds...
+2026-01-07 05:26:21,058 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:26:21,059 - INFO - Retrying in 4 seconds...
+2026-01-07 05:26:25,122 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:26:25,122 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 05:26:25,124 - INFO - Dữ liệu đã ghi: Temp=22.2, Hum=50.0, Label=20260107_052625
+2026-01-07 05:36:26,486 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:36:26,486 - INFO - Retrying in 2 seconds...
+2026-01-07 05:36:28,543 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:36:28,544 - INFO - Retrying in 4 seconds...
+2026-01-07 05:36:32,653 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:36:32,654 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 05:36:32,655 - INFO - Dữ liệu đã ghi: Temp=21.8, Hum=50.0, Label=20260107_053632
+2026-01-07 05:46:34,197 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:46:34,197 - INFO - Retrying in 2 seconds...
+2026-01-07 05:46:36,256 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:46:36,257 - INFO - Retrying in 4 seconds...
+2026-01-07 05:46:40,339 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:46:40,340 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 05:46:40,340 - INFO - Dữ liệu đã ghi: Temp=21.8, Hum=50.0, Label=20260107_054640
+2026-01-07 05:56:41,481 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:56:41,482 - INFO - Retrying in 2 seconds...
+2026-01-07 05:56:43,539 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:56:43,539 - INFO - Retrying in 4 seconds...
+2026-01-07 05:56:47,789 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 05:56:47,789 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 05:56:47,790 - INFO - Dữ liệu đã ghi: Temp=21.8, Hum=50.0, Label=20260107_055647
+2026-01-07 06:06:49,176 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 06:06:49,177 - INFO - Retrying in 2 seconds...
+2026-01-07 06:06:51,263 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 06:06:51,264 - INFO - Retrying in 4 seconds...
+2026-01-07 06:06:55,359 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 06:06:55,359 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 06:06:55,360 - INFO - Dữ liệu đã ghi: Temp=21.8, Hum=50.0, Label=20260107_060655
+2026-01-07 06:16:56,669 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 06:16:56,670 - INFO - Retrying in 2 seconds...
+2026-01-07 06:16:58,732 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 06:16:58,733 - INFO - Retrying in 4 seconds...
+2026-01-07 06:17:03,003 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 06:17:03,004 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 06:17:03,005 - INFO - Dữ liệu đã ghi: Temp=21.8, Hum=50.0, Label=20260107_061703
+2026-01-07 06:27:03,959 - WARNING - Network error fetching weather data (attempt 1/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 06:27:03,960 - INFO - Retrying in 2 seconds...
+2026-01-07 06:27:06,031 - WARNING - Network error fetching weather data (attempt 2/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 06:27:06,032 - INFO - Retrying in 4 seconds...
+2026-01-07 06:27:10,111 - WARNING - Network error fetching weather data (attempt 3/3): 404 Client Error: Not Found for url: http://api.openweathermap.org/data/2.5/weather?q=Ha%20Noi,%20VN&appid=3752e6764a2889aea4649454ecab3d4d&units=metric
+2026-01-07 06:27:10,111 - ERROR - Failed to fetch weather data after multiple retries.
+2026-01-07 06:27:10,112 - INFO - Dữ liệu đã ghi: Temp=21.8, Hum=50.0, Label=20260107_062710
+2026-01-07 06:37:11,596 - INFO - Successfully fetched weather data: Temp 10°C, Humidity 80%, Pressure 1026 hPa
+2026-01-07 06:37:11,597 - INFO - Dữ liệu đã ghi: Temp=21.8, Hum=50.0, Label=20260107_063711
+2026-01-07 06:47:13,268 - INFO - Successfully fetched weather data: Temp 9°C, Humidity 80%, Pressure 1026 hPa
+2026-01-07 06:47:13,270 - INFO - Dữ liệu đã ghi: Temp=21.8, Hum=50.0, Label=20260107_064713
+2026-01-07 06:57:14,665 - INFO - Successfully fetched weather data: Temp 9°C, Humidity 82%, Pressure 1026 hPa
+2026-01-07 06:57:14,666 - INFO - Dữ liệu đã ghi: Temp=21.8, Hum=50.0, Label=20260107_065714
+2026-01-07 07:07:15,810 - INFO - Successfully fetched weather data: Temp 9°C, Humidity 82%, Pressure 1026 hPa
+2026-01-07 07:07:15,811 - INFO - Dữ liệu đã ghi: Temp=21.8, Hum=50.0, Label=20260107_070715
+2026-01-07 07:17:17,230 - INFO - Successfully fetched weather data: Temp 10°C, Humidity 82%, Pressure 1026 hPa
+2026-01-07 07:17:17,231 - INFO - Dữ liệu đã ghi: Temp=21.8, Hum=50.0, Label=20260107_071717
+2026-01-07 07:27:18,826 - INFO - Successfully fetched weather data: Temp 10°C, Humidity 82%, Pressure 1026 hPa
+2026-01-07 07:27:18,828 - INFO - Dữ liệu đã ghi: Temp=21.8, Hum=50.0, Label=20260107_072718
+2026-01-07 07:31:00,971 - INFO - Dừng thu thập dữ liệu theo yêu cầu người dùng.
+2026-01-07 07:31:00,974 - INFO - Serial connection đã đóng.
