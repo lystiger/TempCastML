@@ -7454,3 +7454,158 @@
 2026-01-20 08:12:30,764 - INFO - Dữ liệu đã ghi: Temp=24.4, Hum=77.0, Label=20260120_081230
 2026-01-20 08:19:08,384 - INFO - Dừng thu thập dữ liệu theo yêu cầu người dùng.
 2026-01-20 08:19:08,386 - INFO - Serial connection đã đóng.
+2026-01-20 15:21:25,281 - INFO - Logger has been set up with log rotation.
+2026-01-20 15:21:25,281 - INFO - CSV file đã tồn tại: /home/lystiger/Documents/TempCastML/backend/Settings/../Data/merged_data.csv
+2026-01-20 15:21:25,281 - INFO - Bắt đầu vòng lặp thu thập dữ liệu... Nhấn Ctrl+C để dừng.
+2026-01-20 15:21:25,284 - INFO - Tìm thấy cổng phù hợp: /dev/ttyACM0 - USB JTAG/serial debug unit
+2026-01-20 15:21:27,379 - INFO - Kết nối thành công với /dev/ttyACM0 ở tốc độ 115200.
+2026-01-20 08:21:27,553 - INFO - Successfully fetched weather data: Temp 20.04°C, Humidity 94%, Pressure 1015 hPa
+2026-01-20 08:21:27,561 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=78.0, Label=20260120_082127
+2026-01-20 08:31:28,935 - INFO - Successfully fetched weather data: Temp 20.09°C, Humidity 92%, Pressure 1015 hPa
+2026-01-20 08:31:28,936 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_083128
+2026-01-20 08:41:30,380 - INFO - Successfully fetched weather data: Temp 20.15°C, Humidity 91%, Pressure 1016 hPa
+2026-01-20 08:41:30,381 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_084130
+2026-01-20 08:51:31,767 - INFO - Successfully fetched weather data: Temp 20.2°C, Humidity 90%, Pressure 1016 hPa
+2026-01-20 08:51:31,767 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_085131
+2026-01-20 09:01:33,168 - INFO - Successfully fetched weather data: Temp 20.2°C, Humidity 90%, Pressure 1016 hPa
+2026-01-20 09:01:33,169 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_090133
+2026-01-20 09:11:34,589 - INFO - Successfully fetched weather data: Temp 20.24°C, Humidity 91%, Pressure 1016 hPa
+2026-01-20 09:11:34,590 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_091134
+2026-01-20 09:21:35,967 - INFO - Successfully fetched weather data: Temp 20.44°C, Humidity 88%, Pressure 1016 hPa
+2026-01-20 09:21:35,967 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_092135
+2026-01-20 09:31:37,389 - INFO - Successfully fetched weather data: Temp 20.44°C, Humidity 88%, Pressure 1016 hPa
+2026-01-20 09:31:37,390 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_093137
+2026-01-20 09:41:38,877 - INFO - Successfully fetched weather data: Temp 20.37°C, Humidity 87%, Pressure 1016 hPa
+2026-01-20 09:41:38,877 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_094138
+2026-01-20 09:51:40,285 - INFO - Successfully fetched weather data: Temp 20.35°C, Humidity 87%, Pressure 1017 hPa
+2026-01-20 09:51:40,286 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_095140
+2026-01-20 10:01:41,710 - INFO - Successfully fetched weather data: Temp 20.35°C, Humidity 87%, Pressure 1017 hPa
+2026-01-20 10:01:41,710 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_100141
+2026-01-20 10:11:43,337 - INFO - Successfully fetched weather data: Temp 20.43°C, Humidity 87%, Pressure 1017 hPa
+2026-01-20 10:11:43,338 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_101143
+2026-01-20 10:21:44,525 - INFO - Successfully fetched weather data: Temp 20.57°C, Humidity 84%, Pressure 1017 hPa
+2026-01-20 10:21:44,525 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_102144
+2026-01-20 10:31:45,934 - INFO - Successfully fetched weather data: Temp 20.57°C, Humidity 84%, Pressure 1017 hPa
+2026-01-20 10:31:45,935 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_103145
+2026-01-20 10:41:47,382 - INFO - Successfully fetched weather data: Temp 20.59°C, Humidity 84%, Pressure 1016 hPa
+2026-01-20 10:41:47,382 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_104147
+2026-01-20 10:51:48,782 - INFO - Successfully fetched weather data: Temp 20.58°C, Humidity 82%, Pressure 1016 hPa
+2026-01-20 10:51:48,782 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_105148
+2026-01-20 11:01:50,198 - INFO - Successfully fetched weather data: Temp 20.58°C, Humidity 82%, Pressure 1016 hPa
+2026-01-20 11:01:50,199 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_110150
+2026-01-20 11:11:51,641 - INFO - Successfully fetched weather data: Temp 20.68°C, Humidity 80%, Pressure 1017 hPa
+2026-01-20 11:11:51,642 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_111151
+2026-01-20 11:21:53,044 - INFO - Successfully fetched weather data: Temp 20.58°C, Humidity 83%, Pressure 1016 hPa
+2026-01-20 11:21:53,045 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_112153
+2026-01-20 11:31:54,441 - INFO - Successfully fetched weather data: Temp 20.58°C, Humidity 83%, Pressure 1016 hPa
+2026-01-20 11:31:54,441 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_113154
+2026-01-20 11:41:55,887 - INFO - Successfully fetched weather data: Temp 20.61°C, Humidity 83%, Pressure 1016 hPa
+2026-01-20 11:41:55,887 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_114155
+2026-01-20 11:51:57,306 - INFO - Successfully fetched weather data: Temp 20.65°C, Humidity 81%, Pressure 1016 hPa
+2026-01-20 11:51:57,306 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_115157
+2026-01-20 12:01:58,707 - INFO - Successfully fetched weather data: Temp 20.65°C, Humidity 81%, Pressure 1016 hPa
+2026-01-20 12:01:58,708 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_120158
+2026-01-20 12:12:00,145 - INFO - Successfully fetched weather data: Temp 20.74°C, Humidity 80%, Pressure 1016 hPa
+2026-01-20 12:12:00,146 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_121200
+2026-01-20 12:22:01,539 - INFO - Successfully fetched weather data: Temp 20.78°C, Humidity 79%, Pressure 1016 hPa
+2026-01-20 12:22:01,540 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_122201
+2026-01-20 12:32:02,960 - INFO - Successfully fetched weather data: Temp 20.72°C, Humidity 81%, Pressure 1015 hPa
+2026-01-20 12:32:02,961 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_123202
+2026-01-20 12:42:04,404 - INFO - Successfully fetched weather data: Temp 20.72°C, Humidity 81%, Pressure 1015 hPa
+2026-01-20 12:42:04,404 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_124204
+2026-01-20 12:52:05,797 - INFO - Successfully fetched weather data: Temp 20.69°C, Humidity 77%, Pressure 1015 hPa
+2026-01-20 12:52:05,798 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_125205
+2026-01-20 13:02:07,213 - INFO - Successfully fetched weather data: Temp 20.69°C, Humidity 77%, Pressure 1015 hPa
+2026-01-20 13:02:07,214 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_130207
+2026-01-20 13:12:08,652 - INFO - Successfully fetched weather data: Temp 20.69°C, Humidity 77%, Pressure 1015 hPa
+2026-01-20 13:12:08,653 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_131208
+2026-01-20 13:22:10,041 - INFO - Successfully fetched weather data: Temp 20.69°C, Humidity 77%, Pressure 1015 hPa
+2026-01-20 13:22:10,041 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_132210
+2026-01-20 13:32:11,472 - INFO - Successfully fetched weather data: Temp 20.81°C, Humidity 78%, Pressure 1014 hPa
+2026-01-20 13:32:11,473 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_133211
+2026-01-20 13:42:12,895 - INFO - Successfully fetched weather data: Temp 21.68°C, Humidity 78%, Pressure 1014 hPa
+2026-01-20 13:42:12,896 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_134212
+2026-01-20 13:52:14,281 - INFO - Successfully fetched weather data: Temp 21.6°C, Humidity 76%, Pressure 1014 hPa
+2026-01-20 13:52:14,281 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_135214
+2026-01-20 14:02:15,692 - INFO - Successfully fetched weather data: Temp 21.6°C, Humidity 76%, Pressure 1014 hPa
+2026-01-20 14:02:15,693 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_140215
+2026-01-20 14:12:17,147 - INFO - Successfully fetched weather data: Temp 21.68°C, Humidity 75%, Pressure 1014 hPa
+2026-01-20 14:12:17,148 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_141217
+2026-01-20 14:22:18,548 - INFO - Successfully fetched weather data: Temp 21.71°C, Humidity 71%, Pressure 1014 hPa
+2026-01-20 14:22:18,549 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_142218
+2026-01-20 14:32:19,962 - INFO - Successfully fetched weather data: Temp 21.42°C, Humidity 74%, Pressure 1014 hPa
+2026-01-20 14:32:19,962 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_143219
+2026-01-20 14:42:21,388 - INFO - Successfully fetched weather data: Temp 21.42°C, Humidity 74%, Pressure 1014 hPa
+2026-01-20 14:42:21,389 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_144221
+2026-01-20 14:52:22,781 - INFO - Successfully fetched weather data: Temp 21.38°C, Humidity 76%, Pressure 1013 hPa
+2026-01-20 14:52:22,782 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_145222
+2026-01-20 15:02:24,205 - INFO - Successfully fetched weather data: Temp 21.46°C, Humidity 75%, Pressure 1013 hPa
+2026-01-20 15:02:24,206 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_150224
+2026-01-20 15:12:25,648 - INFO - Successfully fetched weather data: Temp 21.46°C, Humidity 75%, Pressure 1013 hPa
+2026-01-20 15:12:25,649 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_151225
+2026-01-20 15:22:27,043 - INFO - Successfully fetched weather data: Temp 21.42°C, Humidity 71%, Pressure 1013 hPa
+2026-01-20 15:22:27,044 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_152227
+2026-01-20 15:32:28,468 - INFO - Successfully fetched weather data: Temp 21.31°C, Humidity 74%, Pressure 1013 hPa
+2026-01-20 15:32:28,469 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_153228
+2026-01-20 15:42:29,907 - INFO - Successfully fetched weather data: Temp 21.31°C, Humidity 74%, Pressure 1013 hPa
+2026-01-20 15:42:29,908 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_154229
+2026-01-20 15:52:31,327 - INFO - Successfully fetched weather data: Temp 21.28°C, Humidity 74%, Pressure 1013 hPa
+2026-01-20 15:52:31,328 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_155231
+2026-01-20 16:02:32,741 - INFO - Successfully fetched weather data: Temp 21.35°C, Humidity 72%, Pressure 1013 hPa
+2026-01-20 16:02:32,741 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_160232
+2026-01-20 16:12:34,188 - INFO - Successfully fetched weather data: Temp 21.35°C, Humidity 72%, Pressure 1013 hPa
+2026-01-20 16:12:34,189 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_161234
+2026-01-20 16:22:35,593 - INFO - Successfully fetched weather data: Temp 21.23°C, Humidity 78%, Pressure 1013 hPa
+2026-01-20 16:22:35,594 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_162235
+2026-01-20 16:32:37,067 - INFO - Successfully fetched weather data: Temp 20.95°C, Humidity 78%, Pressure 1014 hPa
+2026-01-20 16:32:37,067 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=75.0, Label=20260120_163237
+2026-01-20 16:42:38,459 - INFO - Successfully fetched weather data: Temp 20.95°C, Humidity 78%, Pressure 1014 hPa
+2026-01-20 16:42:38,459 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=75.0, Label=20260120_164238
+2026-01-20 16:52:39,860 - INFO - Successfully fetched weather data: Temp 20.96°C, Humidity 78%, Pressure 1014 hPa
+2026-01-20 16:52:39,861 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_165239
+2026-01-20 17:02:41,246 - INFO - Successfully fetched weather data: Temp 21.03°C, Humidity 78%, Pressure 1013 hPa
+2026-01-20 17:02:41,246 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=75.0, Label=20260120_170241
+2026-01-20 17:12:42,631 - INFO - Successfully fetched weather data: Temp 21.03°C, Humidity 78%, Pressure 1013 hPa
+2026-01-20 17:12:42,632 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_171242
+2026-01-20 17:22:44,031 - INFO - Successfully fetched weather data: Temp 21.01°C, Humidity 74%, Pressure 1013 hPa
+2026-01-20 17:22:44,032 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_172244
+2026-01-20 17:32:45,475 - INFO - Successfully fetched weather data: Temp 20.71°C, Humidity 76%, Pressure 1014 hPa
+2026-01-20 17:32:45,475 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=75.0, Label=20260120_173245
+2026-01-20 17:42:46,897 - INFO - Successfully fetched weather data: Temp 20.71°C, Humidity 76%, Pressure 1014 hPa
+2026-01-20 17:42:46,897 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_174246
+2026-01-20 17:52:48,297 - INFO - Successfully fetched weather data: Temp 20.62°C, Humidity 79%, Pressure 1015 hPa
+2026-01-20 17:52:48,297 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_175248
+2026-01-20 18:02:49,738 - INFO - Successfully fetched weather data: Temp 20.66°C, Humidity 78%, Pressure 1014 hPa
+2026-01-20 18:02:49,738 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_180249
+2026-01-20 18:12:51,153 - INFO - Successfully fetched weather data: Temp 20.66°C, Humidity 78%, Pressure 1014 hPa
+2026-01-20 18:12:51,153 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_181251
+2026-01-20 18:22:52,550 - INFO - Successfully fetched weather data: Temp 20.69°C, Humidity 78%, Pressure 1014 hPa
+2026-01-20 18:22:52,551 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_182252
+2026-01-20 18:32:53,996 - INFO - Successfully fetched weather data: Temp 20.51°C, Humidity 79%, Pressure 1015 hPa
+2026-01-20 18:32:53,997 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_183253
+2026-01-20 18:42:55,388 - INFO - Successfully fetched weather data: Temp 20.51°C, Humidity 79%, Pressure 1015 hPa
+2026-01-20 18:42:55,388 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_184255
+2026-01-20 18:52:56,803 - INFO - Successfully fetched weather data: Temp 20.42°C, Humidity 81%, Pressure 1015 hPa
+2026-01-20 18:52:56,803 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_185256
+2026-01-20 19:02:58,238 - INFO - Successfully fetched weather data: Temp 20.42°C, Humidity 81%, Pressure 1015 hPa
+2026-01-20 19:02:58,238 - INFO - Dữ liệu đã ghi: Temp=24.2, Hum=76.0, Label=20260120_190258
+2026-01-20 19:12:59,631 - INFO - Successfully fetched weather data: Temp 20.42°C, Humidity 81%, Pressure 1015 hPa
+2026-01-20 19:12:59,632 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_191259
+2026-01-20 19:23:01,047 - INFO - Successfully fetched weather data: Temp 20.42°C, Humidity 81%, Pressure 1015 hPa
+2026-01-20 19:23:01,048 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=76.0, Label=20260120_192301
+2026-01-20 19:33:02,484 - INFO - Successfully fetched weather data: Temp 20.23°C, Humidity 81%, Pressure 1016 hPa
+2026-01-20 19:33:02,485 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=76.0, Label=20260120_193302
+2026-01-20 19:43:03,881 - INFO - Successfully fetched weather data: Temp 20.23°C, Humidity 81%, Pressure 1016 hPa
+2026-01-20 19:43:03,881 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=76.0, Label=20260120_194303
+2026-01-20 19:53:05,332 - INFO - Successfully fetched weather data: Temp 20.23°C, Humidity 81%, Pressure 1016 hPa
+2026-01-20 19:53:05,333 - INFO - Dữ liệu đã ghi: Temp=24.1, Hum=76.0, Label=20260120_195305
+2026-01-20 20:03:06,745 - INFO - Successfully fetched weather data: Temp 20.23°C, Humidity 81%, Pressure 1016 hPa
+2026-01-20 20:03:06,746 - INFO - Dữ liệu đã ghi: Temp=24.2, Hum=76.0, Label=20260120_200306
+2026-01-20 20:13:08,177 - INFO - Successfully fetched weather data: Temp 20.4°C, Humidity 81%, Pressure 1016 hPa
+2026-01-20 20:13:08,177 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=76.0, Label=20260120_201308
+2026-01-20 20:23:09,589 - INFO - Successfully fetched weather data: Temp 20.41°C, Humidity 80%, Pressure 1016 hPa
+2026-01-20 20:23:09,590 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_202309
+2026-01-20 20:33:11,013 - INFO - Successfully fetched weather data: Temp 20.3°C, Humidity 79%, Pressure 1016 hPa
+2026-01-20 20:33:11,013 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_203311
+2026-01-20 20:43:12,397 - INFO - Successfully fetched weather data: Temp 20.3°C, Humidity 79%, Pressure 1016 hPa
+2026-01-20 20:43:12,398 - INFO - Dữ liệu đã ghi: Temp=24.5, Hum=77.0, Label=20260120_204312
