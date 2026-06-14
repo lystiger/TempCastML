@@ -1,106 +1,74 @@
+import json
+from pathlib import Path
 
-# import tensorflow as tf
-# from tensorflow.keras.models import Sequential # type: ignore
-# from tensorflow.keras.layers import LSTM, Dense # type: ignore
-# import numpy as np
-# import pandas as pd
-# import matplotlib.pyplot as plt
-
-# # Cấu hình mô hình LSTM
-# SEQ_LENGTH = 10  # Độ dài chuỗi thời gian
-# BATCH_SIZE = 32
-# EPOCHS = 20
-
-# # Xử lí dữ liệu và các đường dẫn(raw vs processed)
-# sensor_data_path = 'data/raw_sensor_data.csv'
-# api_data_path = 'data/raw_api_data.csv'
-# merged_data_path = 'data/merged_data.csv'
-
-# processed_sensor_data_path = 'data/processed/processed_sensor_data.csv'
-# processed_api_data_path = 'data/processed/processed_api_data.csv'
-# processed_merged_data_path = 'data/processed/processed_merged_data.csv'
-
-# save_model_path = 'AI/Model/lstm_model.h5'
-
-# # Đọc dữ liệu từ file CSV
-
-# df = pd.read_csv(merged_data_path)
-
-# # Chia dữ liệu thành tập huấn luyện và kiểm tra
-# feature_columns = [col for col in df.columns if col != 'label'] # Giả sử 'label' là cột nhãn  
-# X_data = df[feature_columns].values # Đặc trưng
-# y_data = df['label'].values # Nhãn
-
-# # Chuẩn hóa dữ liệu
-# def create_sequences(data, labels, seq_length):
-#     xs, ys = [], []
-#     for i in range(len(data) - seq_length):
-#         xs.append(data[i:(i+seq_length)])
-#         ys.append(labels[i+seq_length])
-#     return np.array(xs), np.array(ys)
-
-# X, y = create_sequences(X_data, y_data, SEQ_LENGTH)
-
-# # X.shape = (samples, time_steps, features)
-# num_features = X.shape[2]
-# model = Sequential([
-#     LSTM(50, input_shape=(SEQ_LENGTH, 1), return_sequences=False),
-#     Dense(1)
-# ])
-
-# model.compile(optimizer='adam', loss='mse') # MSE: Mean Squared Error
-
-# # Huấn luyện mô hình
-# history = model.fit(X, y, epochs=EPOCHS, batch_size=BATCH_SIZE, validation_split=0.2)
-
-# # Dự đoán
-# prediction = model.predict(X)
-
-# # Lưu mô hình
-# plt.plot(history.history['loss'], label='train')
-# plt.plot(history.history['val_loss'], label='validation')
-# plt.legend()
-# plt.show()
-
-# # Lưu mô hình đã huấn luyện
-# model.save(save_model_path)
-# print(f"Mô hình đã được lưu tại {save_model_path}")
-# Backend/AI/LSTM.py
 import numpy as np
-from tensorflow.keras.models import load_model
 
-# NOTE: The training code for the LSTM model is commented out above.
-# The code below loads a pre-trained model and uses it for prediction.
 
-# Path to the pre-trained model
-MODEL_PATH = "AI/Model/lstm_model.h5"
+MODEL_DIR = Path(__file__).resolve().parent / "Model"
+MODEL_PATH = MODEL_DIR / "lstm_model.keras"
+LEGACY_MODEL_PATH = MODEL_DIR / "lstm_model.h5"
+PREPROCESSING_PATH = MODEL_DIR / "preprocessing.json"
 
-try:
-    # Load the pre-trained model
-    model = load_model(MODEL_PATH)
-except Exception:
-    # If the model cannot be loaded, set it to None and print a warning
-    model = None
-    print("[Warning] LSTM model not found — using mock predictions")
+
+def _load_artifacts():
+    model_path = MODEL_PATH if MODEL_PATH.exists() else LEGACY_MODEL_PATH
+    if not model_path.exists() or not PREPROCESSING_PATH.exists():
+        return None, None
+
+    try:
+        from tensorflow.keras.models import load_model
+
+        loaded_model = load_model(model_path)
+        metadata = json.loads(PREPROCESSING_PATH.read_text(encoding="utf-8"))
+        return loaded_model, metadata
+    except Exception as exc:
+        print(f"[Warning] Could not load LSTM artifacts: {exc}")
+        return None, None
+
+
+model, preprocessing = _load_artifacts()
+if model is None:
+    print("[Warning] LSTM model not found - using average predictions")
+
 
 def predict_temperature(history, horizon=24):
-    """
-    This function generates a temperature forecast for a given history of temperatures.
-    It uses a pre-trained LSTM model to generate the forecast.
-    If the model is not available, it falls back to a simple average prediction.
-    """
-    if model is None:
-        # Fallback to a simple average prediction if the model is not available
-        avg = float(np.mean(history))
-        return [avg] * horizon
+    """Generate recursive temperature predictions from a temperature history."""
+    if not history:
+        raise ValueError("history must contain at least one temperature")
+    if horizon < 1:
+        raise ValueError("horizon must be positive")
+    if model is None or preprocessing is None:
+        average = float(np.mean(history))
+        return [average] * horizon
 
-    # Preprocess the input data to be in the correct shape for the LSTM model
-    input_seq = np.array(history[-24:]).reshape(1, -1, 1)
-    preds = []
+    config = preprocessing["config"]
+    scaler = preprocessing["scaler"]
+    if int(config["forecast_horizon"]) != 1:
+        raise ValueError("Route inference requires a one-step training artifact")
+    feature_columns = scaler["feature_columns"]
+    if feature_columns != [scaler["target_column"]]:
+        raise ValueError(
+            "Route inference currently supports temperature-only training artifacts"
+        )
+
+    sequence_length = int(config["sequence_length"])
+    if len(history) < sequence_length:
+        raise ValueError(
+            f"history must contain at least {sequence_length} readings for this model"
+        )
+
+    mean = float(scaler["target_mean"])
+    std = float(scaler["target_std"])
+    sequence = (np.asarray(history[-sequence_length:], dtype=np.float32) - mean) / std
+    input_sequence = sequence.reshape(1, sequence_length, 1)
+    predictions = []
+
     for _ in range(horizon):
-        # Generate a prediction using the model
-        pred = model.predict(input_seq)[0][0]
-        preds.append(float(pred))
-        # Update the input sequence with the new prediction
-        input_seq = np.append(input_seq[:, 1:, :], [[[pred]]], axis=1)
-    return preds
+        prediction_scaled = float(model.predict(input_sequence, verbose=0)[0][0])
+        predictions.append(prediction_scaled * std + mean)
+        input_sequence = np.append(
+            input_sequence[:, 1:, :],
+            np.asarray([[[prediction_scaled]]], dtype=np.float32),
+            axis=1,
+        )
+    return predictions
