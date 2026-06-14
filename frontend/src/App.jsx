@@ -1,74 +1,61 @@
-// Import React library.
-import React from "react";
-// Import routing components from react-router-dom for navigation.
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// Import Bootstrap components for layout and navigation.
-import { Container, Navbar, Nav } from "react-bootstrap";
-// LinkContainer integrates react-router with react-bootstrap Nav.Link components.
-import { LinkContainer } from "react-router-bootstrap";
-// Toaster is used for displaying notifications (e.g., success or error messages).
+import { Suspense, lazy, useContext } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 
-// Import page components that will be rendered based on the route.
-import Dashboard from "./pages/Dashboard";
-import History from "./pages/History";
-import About from "./pages/About";
+import { TopNav } from "./components/TopNav";
+import { Footer } from "./components/Footer";
+import { PageLoader } from "./components/States";
 
-// Import the TimeFormatProvider to manage time format state across the application.
-import { TimeFormatProvider } from "./contexts/TimeFormatContext";
+import { TimeFormatProvider, TimeFormatContext } from "./contexts/TimeFormatContext";
 
-// The main App component, serving as the root of the application's UI.
+// Route-level code splitting keeps the chart library (recharts) out of the
+// initial bundle — it loads with the Dashboard / History routes that use it.
+const Dashboard = lazy(() => import("./pages/Dashboard"));
+const History = lazy(() => import("./pages/History"));
+const About = lazy(() => import("./pages/About"));
+
+function Shell() {
+  const { is24hFormat } = useContext(TimeFormatContext);
+  return (
+    <div className="app">
+      <TopNav is24h={is24hFormat} />
+      <main className="main">
+        <div className="container">
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/history" element={<History />} />
+              <Route path="/about" element={<About />} />
+            </Routes>
+          </Suspense>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+}
+
 export default function App() {
   return (
-    // Router enables client-side routing for the application.
-    <Router>
-      {/* Toaster component for displaying notifications. Positioned at top-right. */}
-      <Toaster position="top-right" reverseOrder={false} />
-
-      {/* Navbar component for application navigation. */}
-      <Navbar bg="dark" variant="dark" expand="lg" fixed="top">
-        <Container>
-          {/* Brand logo/name that links to the home page. */}
-          <LinkContainer to="/">
-            <Navbar.Brand>TempCastML</Navbar.Brand>
-          </LinkContainer>
-          {/* Toggler for responsive navigation on smaller screens. */}
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          {/* Collapsible navigation links. */}
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              {/* Navigation link to the Dashboard page. */}
-              <LinkContainer to="/">
-                <Nav.Link>Dashboard</Nav.Link>
-              </LinkContainer>
-              {/* Navigation link to the History page. */}
-              <LinkContainer to="/history">
-                <Nav.Link>History</Nav.Link>
-              </LinkContainer>
-              {/* Navigation link to the About page. */}
-              <LinkContainer to="/about">
-                <Nav.Link>About</Nav.Link>
-              </LinkContainer>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
-      {/* Main content container with top margin and padding to account for fixed navbar. */}
-      <Container className="main-content-container mt-5 pt-3">
-        {/* TimeFormatProvider makes the time format state available to all child components within this section. */}
-        <TimeFormatProvider>
-          {/* Routes define which component to render based on the URL path. */}
-          <Routes>
-            {/* Route for the home page, rendering the Dashboard component. */}
-            <Route path="/" element={<Dashboard />} />
-            {/* Route for the /history path, rendering the History component. */}
-            <Route path="/history" element={<History />} />
-            {/* Route for the /about path, rendering the About component. */}
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </TimeFormatProvider>
-      </Container>
-    </Router>
+    <BrowserRouter>
+      <TimeFormatProvider>
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            style: {
+              background: "#0f1217",
+              color: "#eef1f5",
+              border: "1px solid rgba(255,255,255,0.14)",
+              borderRadius: "12px",
+              fontSize: "13.5px",
+              boxShadow: "0 24px 48px -28px rgba(0,0,0,0.9)",
+            },
+            success: { iconTheme: { primary: "#46e08a", secondary: "#0f1217" } },
+            error: { iconTheme: { primary: "#ff5c5c", secondary: "#0f1217" } },
+          }}
+        />
+        <Shell />
+      </TimeFormatProvider>
+    </BrowserRouter>
   );
 }

@@ -1,57 +1,115 @@
-import React from "react";
-import { Card } from "react-bootstrap";
+const FEATURES = [
+  {
+    title: "Data ingestion",
+    desc: "A Python collector reads an ESP32-S3 / DHT sensor over serial and logs clean, timestamped readings.",
+  },
+  {
+    title: "API",
+    desc: "A FastAPI service exposes the latest reading, historical data, and ML-powered forecasts over REST.",
+  },
+  {
+    title: "Frontend",
+    desc: "This React + Vite dashboard visualizes live telemetry, trends, and predictions with clear data-quality signals.",
+  },
+  {
+    title: "Machine learning",
+    desc: "An LSTM trained on historical time series predicts near-term indoor temperature trends.",
+  },
+  {
+    title: "Embedded inference",
+    desc: "The trained model is compressed for TinyML deployment back onto the ESP32-S3 for on-device prediction.",
+  },
+];
+
+const STACK = ["ESP32-S3", "Arduino / C++", "FastAPI", "SQLite", "React", "Vite", "LSTM", "TinyML"];
+
+const TEAM = [
+  {
+    initials: "HL",
+    name: "Hung Lee",
+    role: "Lead · Embedded & low-level engineering",
+    desc: "Circuit design, sensor firmware, and on-device TinyML deployment.",
+  },
+  {
+    initials: "HA",
+    name: "Hung Anh",
+    role: "Frontend engineering",
+    desc: "Dashboard design, data visualization, and the web experience.",
+  },
+];
 
 export default function About() {
   return (
     <>
-      <h1 className="mb-4">About TempCastML</h1>
-      <Card className="card-hover">
-        <Card.Body>
-          <Card.Title>A Machine Learning Powered Temperature Forecasting Tool</Card.Title>
-          <Card.Text>
-            This application provides real-time temperature monitoring and future forecasting
-            using a Long Short-Term Memory (LSTM) neural network.
-          </Card.Text>
-          <hr />
-          <h5>Components:</h5>
-          <ul>
-            <li>
-              <strong>Data Ingestion:</strong> A Python backend service collects temperature
-              data, which can be sourced from hardware sensors like an Arduino.
-            </li>
-            <li>
-              <strong>API:</strong> A FastAPI server provides RESTful endpoints for accessing
-              the latest sensor readings, historical data, and ML-powered predictions.
-            </li>
-            <li>
-              <strong>Frontend:</strong> A responsive user interface built with React and
-              Bootstrap for visualizing data and forecasts.
-            </li>
-            <li>
-              <strong>Machine Learning Model:</strong> An LSTM model trained on historical
-              time-series data to predict future temperature trends.
-            </li>
-          </ul>
-        </Card.Body>
-      </Card>
-      <Card className="card-hover">
-        <Card.Body>
-          <Card.Title>Who are we ?</Card.Title>
-          <Card.Text>
-            A little bit about us, we are a pair of stupid ass douchebag who are trying to create something for our CV and TempCastML is the first step.
-          </Card.Text>
-          <hr />
-          <h5>Role:</h5>
-          <ul>
-            <li>
-              <strong>Hung Lee:</strong> Leader, Low-Level Programmer, Circuit Builder, Mechanical Freak, Electrical Engineer Genius.
-            </li>
-            <li>
-              <strong>Hung Anh:</strong> A little fellow whose main purpose is to relax and build the webpage, all roads lead to my boss.
-            </li>
-          </ul>
-        </Card.Body>
-      </Card>
+      <div className="page-head">
+        <div>
+          <span className="eyebrow">
+            <b>03</b> / About
+          </span>
+          <h1 className="page-title">About TempCastML</h1>
+          <p className="page-sub">
+            A TinyML-powered system that forecasts indoor temperature trends from
+            real-time sensor data — from the ESP32-S3 all the way to on-device inference.
+          </p>
+        </div>
+      </div>
+
+      <div className="grid dash-grid">
+        <section className="panel panel--pad col-6 rise rise-1">
+          <span className="eyebrow">How it works</span>
+          <div style={{ marginTop: 12 }}>
+            {FEATURES.map((f, i) => (
+              <div className="feature" key={f.title}>
+                <span className="feature__idx">{String(i + 1).padStart(2, "0")}</span>
+                <div>
+                  <div className="feature__b">{f.title}</div>
+                  <div className="feature__d">{f.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <div className="col-6" style={{ display: "grid", gap: 18, alignContent: "start" }}>
+          <section className="panel panel--pad rise rise-2">
+            <span className="eyebrow">Pipeline</span>
+            <p className="footer__chain" style={{ marginTop: 12, fontSize: 13, lineHeight: 2 }}>
+              <b>sensor</b> → <b>serial / ingestion</b> → <b>database / API</b> →{" "}
+              <b>dashboard</b> → <b>ML model</b> → <b>ESP32 deployment</b>
+            </p>
+            <span className="eyebrow" style={{ marginTop: 20, display: "inline-flex" }}>
+              Stack
+            </span>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 12 }}>
+              {STACK.map((s) => (
+                <span key={s} className="pill mono" style={{ fontSize: 12 }}>
+                  {s}
+                </span>
+              ))}
+            </div>
+          </section>
+
+          <section className="panel panel--pad rise rise-3">
+            <span className="eyebrow">Team</span>
+            <div style={{ display: "grid", gap: 18, marginTop: 14 }}>
+              {TEAM.map((p) => (
+                <div className="person" key={p.name}>
+                  <span className="person__avatar">{p.initials}</span>
+                  <div>
+                    <div className="feature__b">{p.name}</div>
+                    <div className="mono" style={{ fontSize: 11.5, color: "var(--accent)", letterSpacing: "0.04em" }}>
+                      {p.role}
+                    </div>
+                    <div className="feature__d" style={{ marginTop: 4 }}>
+                      {p.desc}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        </div>
+      </div>
     </>
   );
 }

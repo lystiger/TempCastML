@@ -1,66 +1,82 @@
-// This file is responsible for making API calls to the backend.
-// During development, it currently imports functions from `fakeApi.js` to simulate backend responses.
-// In a production environment, these would typically be actual HTTP requests (e.g., using axios or the built-in fetch API)
-// to a live backend server.
+// API client for the TempCastML backend (FastAPI).
+//
+// Contract (see backend/Routes + backend/Database/models.py):
+//   GET /                       -> { message }                         (health)
+//   GET /sensor/latest          -> Reading { id, device_id, temperature_c, timestamp }
+//   GET /sensor/history?limit=N -> Reading[]
+//   GET /predict/?device_id&horizon -> { device_id, generated_at, horizon_hours, forecast: number[] }
+//
+// The backend returns 404 when a resource exists but holds no data yet
+// (e.g. no readings collected). We surface that as an *empty* state, distinct
+// from a connection/server failure, so the UI never hides real errors.
 
-// Define the base URL for the API. It tries to use an environment variable `VITE_API_URL`
-// (common in Vite projects) or defaults to `http://localhost:8000/api` for local development.
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
-/**
- * Fetches the latest sensor data.
- * @returns {Promise<Object>} A promise that resolves with the latest sensor data.
- */
-export const getLatestSensorData = async () => {
+export class ApiError extends Error {
+  /** @param {number} status HTTP status, or 0 for a network/transport failure. */
+  constructor(status, message) {
+    super(message);
+    this.name = "ApiError";
+    this.status = status;
+  }
+}
+
+async function request(path, { signal } = {}) {
+  let res;
   try {
-    const response = await fetch(`${API_BASE_URL}/sensor/latest`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Failed to fetch latest sensor data:", error);
-    throw error;
+    res = await fetch(`${API_BASE_URL}${path}`, { signal });
+  } catch (err) {
+    if (err?.name === "AbortError") throw err;
+    // fetch only rejects on network/transport failure -> backend unreachable.
+    throw new ApiError(0, "Cannot reach the backend.");
+  }
+  if (!res.ok) {
+    throw new ApiError(res.status, `Request failed (${res.status}).`);
+  }
+  return res.json();
+}
+
+/** Lightweight liveness probe used for the connection badge. */
+export const getHealth = async (signal) => {
+  try {
+    await request("/", { signal });
+    return true;
+  } catch (err) {
+    if (err?.name === "AbortError") throw err;
+    return false;
   }
 };
 
-/**
- * Fetches predictions.
- * @param {number} device_id - The ID of the device.
- * @param {number} horizon - The prediction horizon (e.g., 24 hours).
- * @returns {Promise<Object>} A promise that resolves with prediction data.
- */
-export const getPrediction = async (device_id = 1, horizon = 24) => {
+/** Latest reading, or null when no readings have been collected yet. */
+export const getLatestSensorData = async (signal) => {
   try {
-    const response = await fetch(`${API_BASE_URL}/predict?device_id=${device_id}&horizon=${horizon}`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Failed to fetch prediction:", error);
-    throw error;
+    return await request("/sensor/latest", { signal });
+  } catch (err) {
+    if (err instanceof ApiError && err.status === 404) return null;
+    throw err;
   }
 };
 
-/**
- * Fetches historical sensor data.
- * @param {Object} params - Parameters for filtering historical data (e.g., date range, device_id).
- * @returns {Promise<Object>} A promise that resolves with historical sensor data.
- */
-export const getHistoricalSensorData = async (params = {}) => {
+/** Historical readings (newest first), or [] when none exist. */
+export const getHistoricalSensorData = async (params = {}, signal) => {
+  const query = new URLSearchParams(params).toString();
   try {
-    const query = new URLSearchParams(params).toString();
-    const response = await fetch(`${API_BASE_URL}/sensor/history?${query}`);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-    return data;
-  } catch (error) {
-    console.error("Failed to fetch historical sensor data:", error);
-    throw error;
+    return await request(`/sensor/history${query ? `?${query}` : ""}`, { signal });
+  } catch (err) {
+    if (err instanceof ApiError && err.status === 404) return [];
+    throw err;
+  }
+};
+
+/** Forecast for a device, or null when there isn't enough data to predict. */
+export const getPrediction = async (device_id = 1, horizon = 24, signal) => {
+  try {
+    return await request(
+      `/predict/?device_id=${device_id}&horizon=${horizon}`,
+      { signal }
+    );
+  } catch (err) {
+    if (err instanceof ApiError && err.status === 404) return null;
+    throw err;
   }
 };
