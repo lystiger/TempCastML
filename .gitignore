@@ -18,6 +18,9 @@ __pycache__/
 # CSV or dataset files
 *.npy
 
+# Local database
+tempcastml.db
+
 # Windows
 Thumbs.db
 .DS_Store

@@ -1,8 +1,8 @@
 # TempCastML
 
-> A TinyML-powered system that predicts indoor room-temperature trends from
-> real-time sensor data — collected on an **ESP32-S3**, forecast with an **LSTM**,
-> and visualized through a live telemetry dashboard.
+> An edge-ML research system for collecting indoor conditions on an
+> **ESP32-S3**, evaluating short-term temperature forecasts, and visualizing
+> live telemetry through a React dashboard.
 
 <p align="left">
   <img alt="ESP32-S3" src="https://img.shields.io/badge/Hardware-ESP32--S3-1f2937?logo=espressif&logoColor=white" />
@@ -10,7 +10,7 @@
   <img alt="Python" src="https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white" />
   <img alt="React" src="https://img.shields.io/badge/Frontend-React%2019-61DAFB?logo=react&logoColor=black" />
   <img alt="Vite" src="https://img.shields.io/badge/Build-Vite%207-646CFF?logo=vite&logoColor=white" />
-  <img alt="LSTM" src="https://img.shields.io/badge/ML-LSTM%20%E2%86%92%20TinyML-FF8A3D" />
+  <img alt="LSTM" src="https://img.shields.io/badge/ML-LSTM%20research%20%E2%86%92%20TinyML%20target-FF8A3D" />
 </p>
 
 ![TempCastML dashboard](screenshots/dashboard.png)
@@ -37,8 +37,8 @@ flowchart LR
     C --> D[FastAPI]
     D --> E[React dashboard]
     C --> F[LSTM training]
-    F --> G[TinyML / TFLite]
-    G -.deploy.-> A
+    F --> G{Quality gates passed?}
+    G -.future TinyML / TFLite deployment.-> A
 ```
 
 ## Screenshots
@@ -63,7 +63,7 @@ offline states.
 | Hardware | ESP32-S3, DHT temperature/humidity sensor, Arduino (C++) |
 | Ingestion | Python serial collector + cleaning pipeline |
 | Backend / API | FastAPI, SQLModel, SQLite, SlowAPI (rate limiting) |
-| Machine learning | TensorFlow / Keras LSTM → TinyML (TFLite) |
+| Machine learning | TensorFlow / Keras LSTM research; TinyML deployment target |
 | Frontend | React 19, Vite 7, Recharts, React Router |
 
 ## AI and model evaluation
@@ -239,4 +239,4 @@ npm run lint      # eslint
 
 ## License
 
-No license has been specified yet — please contact the authors before reuse.
+Licensed under the [MIT License](LICENSE).
