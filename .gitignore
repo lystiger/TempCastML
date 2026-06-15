@@ -8,6 +8,7 @@ __pycache__/
 
 # TensorFlow / AI model files
 *.h5
+*.keras
 *.pb
 *.tflite
 

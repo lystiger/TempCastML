@@ -12,6 +12,7 @@ idna==3.10
 keras==3.11.1
 libclang==18.1.1
 Markdown==3.8.2
+matplotlib==3.9.2
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 mdurl==0.1.2

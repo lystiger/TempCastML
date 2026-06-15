@@ -1,0 +1,91 @@
+{
+  "config": {
+    "dataset_path": "backend/Data/merged_data.csv",
+    "model_output_dir": "backend/AI/Model/residual_60min",
+    "report_output_dir": "backend/AI/Reports/residual_60min",
+    "feature_columns": [
+      "temperature",
+      "humidity",
+      "outside_temp",
+      "outside_humidity",
+      "outside_pressure",
+      "temp_delta_outside",
+      "hour_sin",
+      "hour_cos",
+      "day_sin",
+      "day_cos"
+    ],
+    "sequence_length": 24,
+    "forecast_horizon": 6,
+    "train_fraction": 0.7,
+    "validation_fraction": 0.15,
+    "max_gap_minutes": 20.0,
+    "min_temperature": 15.0,
+    "max_temperature": 45.0,
+    "lstm_units": 32,
+    "dropout": 0.1,
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "epochs": 50,
+    "patience": 8,
+    "seed": 42,
+    "horizon_minutes": 60
+  },
+  "dataset": {
+    "source_rows": 3231,
+    "cleaned_rows": 3131,
+    "dropped_rows": 100,
+    "date_start": "2025-12-08T15:11:47",
+    "date_end": "2026-01-28T09:10:39",
+    "examples": {
+      "train": 1558,
+      "validation": 337,
+      "test": 412
+    }
+  },
+  "metrics": {
+    "all": {
+      "samples": 412,
+      "model": {
+        "mae": 0.3543893619648461,
+        "rmse": 0.4384068940194625,
+        "r2": 0.6491003718820585
+      },
+      "persistence": {
+        "mae": 0.1733009560594281,
+        "rmse": 0.34274730650859414,
+        "r2": 0.7855252060301832
+      },
+      "model_bias": 0.2882591187953949
+    },
+    "unchanged": {
+      "samples": 272,
+      "model": {
+        "mae": 0.2809467596166274,
+        "rmse": 0.3412936874840303,
+        "r2": 0.7745306112351762
+      },
+      "persistence": {
+        "mae": 0.0007352828979492188,
+        "rmse": 0.008574798414088682,
+        "r2": 0.9998576757466978
+      },
+      "model_bias": 0.2800295650959015
+    },
+    "changed": {
+      "samples": 140,
+      "model": {
+        "mae": 0.49707784652709963,
+        "rmse": 0.5825051408879756,
+        "r2": 0.4289438242292972
+      },
+      "persistence": {
+        "mae": 0.5085714067731585,
+        "rmse": 0.5878532108524331,
+        "r2": 0.41840977736163687
+      },
+      "model_bias": 0.3042479455471039
+    },
+    "beats_persistence_mae": false
+  }
+}
